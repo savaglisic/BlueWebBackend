@@ -18,7 +18,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(128), nullable=False)
+    password = db.Column(db.String(255), nullable=False)  # Increased size to 255
 
 # Define the EmailWhitelist model
 class EmailWhitelist(db.Model):
@@ -28,11 +28,11 @@ class EmailWhitelist(db.Model):
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
-    email = data.get('email')
+    email = data.get('email').lower()
     password = data.get('password')
 
     # Check if the email is in the whitelist
-    whitelisted_email = EmailWhitelist.query.filter_by(email=email.lower()).first()
+    whitelisted_email = EmailWhitelist.query.filter_by(email=email).first()
 
     if not whitelisted_email:
         return jsonify({'status': 'email_not_whitelisted'}), 400
@@ -44,12 +44,13 @@ def login():
     elif user:
         return jsonify({'status': 'incorrect_password'}), 401
     else:
-        return jsonify({'status': 'email_not_whitelisted'}), 400
+        # Email is whitelisted but no user exists, prompt for account creation
+        return jsonify({'status': 'user_not_found_but_whitelisted'}), 200
 
 @app.route('/update_user', methods=['PUT'])
 def update_user():
     data = request.json
-    email = data.get('email')
+    email = data.get('email').lower()  # Normalize email to lowercase
     new_user_name = data.get('user_name')
     new_password = data.get('password')
 
@@ -58,16 +59,29 @@ def update_user():
     if not whitelisted_email:
         return jsonify({'status': 'email_not_whitelisted'}), 400
 
-    # Update user information if the user exists
+    # Check if the user exists
     user = User.query.filter_by(email=email).first()
     if user:
+        # Update existing user
         user.user_name = new_user_name if new_user_name else user.user_name
         if new_password:
             user.password = generate_password_hash(new_password)
         db.session.commit()
         return jsonify({'status': 'update_successful'}), 200
     else:
-        return jsonify({'status': 'user_not_found'}), 404
+        # Create a new user
+        if not new_user_name or not new_password:
+            return jsonify({'status': 'missing_user_info'}), 400
+        
+        new_user = User(
+            user_name=new_user_name,
+            email=email,
+            password=generate_password_hash(new_password)
+        )
+        db.session.add(new_user)
+        db.session.commit()
+        return jsonify({'status': 'user_created_successfully'}), 201
+
     
 @app.route('/api/test', methods=['GET'])
 def test():
