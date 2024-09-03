@@ -32,7 +32,8 @@ def login():
     password = data.get('password')
 
     # Check if the email is in the whitelist
-    whitelisted_email = EmailWhitelist.query.filter_by(email=email).first()
+    whitelisted_email = EmailWhitelist.query.filter_by(email=email.lower()).first()
+
     if not whitelisted_email:
         return jsonify({'status': 'email_not_whitelisted'}), 400
 
@@ -67,12 +68,22 @@ def update_user():
         return jsonify({'status': 'update_successful'}), 200
     else:
         return jsonify({'status': 'user_not_found'}), 404
+    
+@app.route('/api/test', methods=['GET'])
+def test():
+    return jsonify({"message": "Test successful"}), 200
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5173')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 if __name__ == '__main__':
     # Use the app context to avoid "Working outside of application context" errors
     with app.app_context():
         db.create_all()  # Create the database tables if they don't exist
-
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
 
 
