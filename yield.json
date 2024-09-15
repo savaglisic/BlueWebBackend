@@ -1,0 +1,5918 @@
+[
+  {
+    "cumulative": "3650.001344",
+    "genotype": "Kestrel",
+    "location": "South FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5205.917774",
+    "genotype": "Arcadia",
+    "location": "South FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4046.422202",
+    "genotype": "Avanti",
+    "location": "South FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1953.282273",
+    "genotype": "Chickadee",
+    "location": "South FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1271.003704",
+    "genotype": "Endura",
+    "location": "South FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3926.749407",
+    "genotype": "06-22",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2959.236818",
+    "genotype": "08-262",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4253.789527",
+    "genotype": "08-308",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3072.634918",
+    "genotype": "09-167",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5823.672824",
+    "genotype": "09-311",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2741.058873",
+    "genotype": "10-153",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2777.346265",
+    "genotype": "10-179",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1591.655732",
+    "genotype": "10-282",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1959.065576",
+    "genotype": "10-289",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2785.964521",
+    "genotype": "Colossus",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3893.183569",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4959.579302",
+    "genotype": "Sentinel",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3300.791895",
+    "genotype": "11-158",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1915.974298",
+    "genotype": "12-8",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2867.15756",
+    "genotype": "12-71",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "870.3530971",
+    "genotype": "12-272",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2455.295661",
+    "genotype": "13-149",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3921.306298",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2935.19642",
+    "genotype": "Endura",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2515.62345",
+    "genotype": "Winterbell",
+    "location": "Central FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4404.525",
+    "genotype": "04-311A",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2263.375",
+    "genotype": "05-174",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1909.525",
+    "genotype": "05-359",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3460.975",
+    "genotype": "05-378",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4018.255",
+    "genotype": "06-19",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4194.54",
+    "genotype": "06-22",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2292.395",
+    "genotype": "06-552",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4390.64",
+    "genotype": "07-435",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4490.69",
+    "genotype": "08-15",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3472.56",
+    "genotype": "08-180",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3645.945",
+    "genotype": "08-22",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4402.21",
+    "genotype": "08-237",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6244.595",
+    "genotype": "08-308",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1764.69",
+    "genotype": "08-312",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1981.88",
+    "genotype": "08-361",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2121.73",
+    "genotype": "08-9",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3402.98",
+    "genotype": "09-132",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4530.965",
+    "genotype": "09-167",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4162.185",
+    "genotype": "09-177",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1045.325",
+    "genotype": "09-186",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1859.9",
+    "genotype": "09-207",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6088.885",
+    "genotype": "09-216",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1910.415",
+    "genotype": "09-239",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1536.755",
+    "genotype": "09-279",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6826.205",
+    "genotype": "09-311",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3565.3925",
+    "genotype": "09-312",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "647.06",
+    "genotype": "09-38",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3017.945",
+    "genotype": "09-42",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1482.615",
+    "genotype": "09-68",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2257.71",
+    "genotype": "09-80",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3653.33",
+    "genotype": "10-100",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "7553.13",
+    "genotype": "10-103",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3323.81",
+    "genotype": "10-115",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3273.415",
+    "genotype": "10-117",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3132.505",
+    "genotype": "10-13",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3640.875",
+    "genotype": "10-131",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5212.56",
+    "genotype": "10-144",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4732.31",
+    "genotype": "10-153",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4865.21",
+    "genotype": "10-161",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3322.925",
+    "genotype": "10-162",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3266.555",
+    "genotype": "10-179",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2433.855",
+    "genotype": "10-182",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1786.395",
+    "genotype": "10-184",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2571.25",
+    "genotype": "10-196",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2961.445",
+    "genotype": "10-198",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "114.205",
+    "genotype": "10-207",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3073.455",
+    "genotype": "10-211",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1036.74",
+    "genotype": "10-227",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4547.17",
+    "genotype": "10-245",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5741.225",
+    "genotype": "10-252",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1967.28",
+    "genotype": "10-271",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4880.235",
+    "genotype": "10-282",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2855.345",
+    "genotype": "10-289",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3243.01",
+    "genotype": "10-6",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1575.735",
+    "genotype": "11-102",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6152.29",
+    "genotype": "11-112",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3499.525",
+    "genotype": "11-124",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "298.9025",
+    "genotype": "11-128",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3636.33",
+    "genotype": "11-146",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "9303.21",
+    "genotype": "Sentinel",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6497.33",
+    "genotype": "11-158",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2084.92",
+    "genotype": "11-18",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2768.825",
+    "genotype": "11-181",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "608.065",
+    "genotype": "11-182",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5185.515",
+    "genotype": "11-184",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1993.265",
+    "genotype": "11-196",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2555.245",
+    "genotype": "11-199",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6312.54",
+    "genotype": "11-229",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6013.865",
+    "genotype": "11-233",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2715.95",
+    "genotype": "11-246",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3371.375",
+    "genotype": "11-257",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2952.425",
+    "genotype": "Colossus",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5461.795",
+    "genotype": "11-37",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4943.415",
+    "genotype": "Albus",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4792.095",
+    "genotype": "11-52",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6673.255",
+    "genotype": "11-80",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6640.3",
+    "genotype": "12-113",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "761.745",
+    "genotype": "12-128",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1439.675",
+    "genotype": "12-142",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4211.995",
+    "genotype": "12-159",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "869.54",
+    "genotype": "12-160",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3072.11",
+    "genotype": "12-179",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "339.91",
+    "genotype": "12-181",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3863.155",
+    "genotype": "12-213A",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "660.685",
+    "genotype": "12-229",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "403.3",
+    "genotype": "12-230",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1832.395",
+    "genotype": "12-257",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2130.97",
+    "genotype": "12-272",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4229.325",
+    "genotype": "12-284",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3996.39",
+    "genotype": "12-33",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5208.835",
+    "genotype": "12-38",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "396.715",
+    "genotype": "12-492",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1639.985",
+    "genotype": "12-54",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "944.35",
+    "genotype": "12-71",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5918.36",
+    "genotype": "12-8",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2941.47",
+    "genotype": "13-100",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "169.58",
+    "genotype": "13-106",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4281.37",
+    "genotype": "13-119",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "889.285",
+    "genotype": "13-121",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2459.2",
+    "genotype": "13-123",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "642.965",
+    "genotype": "13-143",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1305.665",
+    "genotype": "13-149",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "534.435",
+    "genotype": "13-153",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1469.315",
+    "genotype": "13-161",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4065.035",
+    "genotype": "13-168",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2294.31",
+    "genotype": "13-182",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "630.26",
+    "genotype": "13-187",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2790.55",
+    "genotype": "13-196",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1026.675",
+    "genotype": "13-216A",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1381.33",
+    "genotype": "13-216B",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "324.59",
+    "genotype": "13-220",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "173.77",
+    "genotype": "13-899",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "666.945",
+    "genotype": "13-928",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "190.56",
+    "genotype": "13-942",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "73.93",
+    "genotype": "13-986",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "726.845",
+    "genotype": "14-170",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4807.8",
+    "genotype": "14-184",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1640.69",
+    "genotype": "14-228",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "506.855",
+    "genotype": "14-242",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1466.29",
+    "genotype": "14-245",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "133.82",
+    "genotype": "14-83",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "567.175",
+    "genotype": "15-143",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4805.8",
+    "genotype": "Arcadia",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3153.53",
+    "genotype": "Avanti",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3757.68",
+    "genotype": "Bobolink",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "477.445",
+    "genotype": "Chickadee",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "7618.235",
+    "genotype": "Emerald",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5510.275",
+    "genotype": "Endura",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3735.2",
+    "genotype": "Farthing",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3668.8",
+    "genotype": "Flicker",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2225.205",
+    "genotype": "Indigocrisp",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3082.485",
+    "genotype": "Keecrisp",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2392.995",
+    "genotype": "Kestrel",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2953.45",
+    "genotype": "Magnus",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3485.915",
+    "genotype": "Meadowlark",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3907.285",
+    "genotype": "Optimus",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2356.915",
+    "genotype": "Patrecia",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3111.475",
+    "genotype": "Primadonna",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2766.02",
+    "genotype": "Raven",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3990.6075",
+    "genotype": "SanJoaquin",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "581.415",
+    "genotype": "Scintilla",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2285.44",
+    "genotype": "Snowchaser",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2387.495",
+    "genotype": "Springhigh",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2234.39",
+    "genotype": "Sweetcrisp",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2310.13",
+    "genotype": "Vireo",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4923.845",
+    "genotype": "Wayne",
+    "location": "Citra FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2490.06",
+    "genotype": "04-311A",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3958.27",
+    "genotype": "05-174",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2853.245",
+    "genotype": "05-359",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2587.99",
+    "genotype": "05-378",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6553.435",
+    "genotype": "06-19",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2526.435",
+    "genotype": "06-22",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1508.465",
+    "genotype": "06-552",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1244.52",
+    "genotype": "07-436",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3077.085",
+    "genotype": "08-15",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3641.285",
+    "genotype": "08-178",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2505.335",
+    "genotype": "08-180",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3149.595",
+    "genotype": "08-22",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3343.955",
+    "genotype": "08-237",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3924.8",
+    "genotype": "08-308",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3789.455",
+    "genotype": "08-312",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1198.55",
+    "genotype": "08-361",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1321.64",
+    "genotype": "08-9",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3117.635",
+    "genotype": "09-132",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4711.315",
+    "genotype": "09-167",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5258.115",
+    "genotype": "09-177",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1954.235",
+    "genotype": "09-186",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1903.195",
+    "genotype": "09-207",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5791.935",
+    "genotype": "09-216",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1184.615",
+    "genotype": "09-239",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1859.8475",
+    "genotype": "09-279",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4030.23",
+    "genotype": "09-311",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2889.34",
+    "genotype": "09-312",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1967.85",
+    "genotype": "09-38",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4833.76",
+    "genotype": "09-42",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2995.445",
+    "genotype": "09-68",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1705.25",
+    "genotype": "09-80",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2660.885",
+    "genotype": "10-100",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1501.66",
+    "genotype": "10-103",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3678.205",
+    "genotype": "10-117",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4035.005",
+    "genotype": "10-13",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2604.865",
+    "genotype": "10-131",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2933.0875",
+    "genotype": "10-144",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6642.53",
+    "genotype": "10-153",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2597.98",
+    "genotype": "10-161",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4628.29",
+    "genotype": "10-162",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2243.315",
+    "genotype": "10-174",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "7516.68",
+    "genotype": "10-179",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2123.255",
+    "genotype": "10-182",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2835.485",
+    "genotype": "10-184",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2591.025",
+    "genotype": "10-196",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1049.9",
+    "genotype": "10-198",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "47.125",
+    "genotype": "10-207",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1289.765",
+    "genotype": "10-211",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1929.445",
+    "genotype": "10-227",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2585.035",
+    "genotype": "10-245",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5639.075",
+    "genotype": "10-252",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1785.715",
+    "genotype": "10-271",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2433.72",
+    "genotype": "10-282",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5002.285",
+    "genotype": "10-289",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3704.33",
+    "genotype": "10-6",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2903.5",
+    "genotype": "11-102",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4500.77",
+    "genotype": "11-112",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4106.875",
+    "genotype": "11-124",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "32.08",
+    "genotype": "11-128",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5338.125",
+    "genotype": "11-146",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "9512.45",
+    "genotype": "Sentinel",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4074.92",
+    "genotype": "11-158",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3473.33",
+    "genotype": "11-18",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5084.985",
+    "genotype": "11-181",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2555.14",
+    "genotype": "11-184",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1770.48",
+    "genotype": "11-196",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3090.94",
+    "genotype": "11-199",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3563.03",
+    "genotype": "11-229",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4744.08",
+    "genotype": "11-233",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3116.86",
+    "genotype": "11-246",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3142.69",
+    "genotype": "11-257",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5630.65",
+    "genotype": "Colossus",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4542.955",
+    "genotype": "11-37",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6576.37",
+    "genotype": "Albus",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5917.185",
+    "genotype": "11-52",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5567.66",
+    "genotype": "11-80",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4782.82",
+    "genotype": "12-113",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1351.305",
+    "genotype": "12-142",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5307.71",
+    "genotype": "12-159",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "546.56",
+    "genotype": "12-160",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4484.745",
+    "genotype": "12-179",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1783.54",
+    "genotype": "12-181",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5144.29",
+    "genotype": "12-213A",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "196.245",
+    "genotype": "12-229",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "187.25",
+    "genotype": "12-230",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2908.425",
+    "genotype": "12-257",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "8942.595",
+    "genotype": "12-271",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1974.56",
+    "genotype": "12-272",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3115.855",
+    "genotype": "12-284",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3560.5",
+    "genotype": "12-33",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2978.605",
+    "genotype": "12-38",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "134.33",
+    "genotype": "12-492",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3251.0075",
+    "genotype": "12-54",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "926.9875",
+    "genotype": "12-71",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3303.905",
+    "genotype": "12-8",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2002.18",
+    "genotype": "13-100",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "73.28",
+    "genotype": "13-106",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2265.1",
+    "genotype": "13-119",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1212.085",
+    "genotype": "13-121",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2392.177",
+    "genotype": "13-123",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2451.2",
+    "genotype": "13-141",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1446.525",
+    "genotype": "13-143",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3711.9975",
+    "genotype": "13-149",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "463.41",
+    "genotype": "13-153",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1360.495",
+    "genotype": "13-161",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4667.09",
+    "genotype": "13-168",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1547.05",
+    "genotype": "13-182",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "166.815",
+    "genotype": "13-187",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4456.51",
+    "genotype": "13-196",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "364.875",
+    "genotype": "13-216A",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "437.66",
+    "genotype": "13-216B",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "273.7",
+    "genotype": "13-220",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "577.07",
+    "genotype": "13-38",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "170.125",
+    "genotype": "13-899",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "201.915",
+    "genotype": "13-928",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "49.83",
+    "genotype": "13-942",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "37.575",
+    "genotype": "13-986",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "277.435",
+    "genotype": "14-170",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3096.705",
+    "genotype": "14-184",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "781.325",
+    "genotype": "14-228",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "342.17",
+    "genotype": "14-242",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "786.425",
+    "genotype": "14-245",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "152.64",
+    "genotype": "14-83",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "171.965",
+    "genotype": "15-143",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1824.155",
+    "genotype": "Chickadee",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "3222.005",
+    "genotype": "Farthing",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "4405.0775",
+    "genotype": "Keecrisp",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2280.195",
+    "genotype": "Kestrel",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "8327.63",
+    "genotype": "Magnus",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "1169.445",
+    "genotype": "Meadowlark",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "11487.0325",
+    "genotype": "Optimus",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "5539.305",
+    "genotype": "Patrecia",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "7430.379",
+    "genotype": "Vireo",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "2085.345",
+    "genotype": "Wayne",
+    "location": "Central North FL",
+    "season": "2019"
+  },
+  {
+    "cumulative": "6612.52645",
+    "genotype": "17-141",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "6364.474513",
+    "genotype": "17-142",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3061.7487",
+    "genotype": "17-78",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "632.02",
+    "genotype": "Avanti",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "987.32",
+    "genotype": "Arcadia",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "436.96",
+    "genotype": "12-271",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "991.85",
+    "genotype": "12-54",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "329.61",
+    "genotype": "11-158",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "84.66",
+    "genotype": "11-124",
+    "location": "South FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1890.57354",
+    "genotype": "10-153",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "2111.473088",
+    "genotype": "11-18",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "0",
+    "genotype": "Colossus",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "2834.04594",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1837.049625",
+    "genotype": "11-52",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "2377.731885",
+    "genotype": "11-112",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1212.906345",
+    "genotype": "11-124",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3646.430108",
+    "genotype": "Sentinel",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3550.268498",
+    "genotype": "11-158",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1239.668303",
+    "genotype": "11-233",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1759.485308",
+    "genotype": "12-8",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1545.389648",
+    "genotype": "12-33",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3121.169993",
+    "genotype": "12-54",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1417.02297",
+    "genotype": "12-113",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3102.5727",
+    "genotype": "12-159",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3401.036565",
+    "genotype": "12-271",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3109.83018",
+    "genotype": "13-149",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1124.9094",
+    "genotype": "13-216A",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "741.6237375",
+    "genotype": "14-245",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3032.265863",
+    "genotype": "Optimus",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3896.813168",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1305.439215",
+    "genotype": "Endura",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3238.65045",
+    "genotype": "Winterbell",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3260.876483",
+    "genotype": "06-316",
+    "location": "Central FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "5354.16",
+    "genotype": "09-216",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "2895.975",
+    "genotype": "10-153",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "4454.445",
+    "genotype": "Sentinel",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "7514.685",
+    "genotype": "11-18",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3608.13",
+    "genotype": "Albus",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "7508.615",
+    "genotype": "12-179",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3327.745",
+    "genotype": "12-229",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "2486.355",
+    "genotype": "12-292",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "2218.045",
+    "genotype": "12-308",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "4212.2",
+    "genotype": "12-54",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3318.065",
+    "genotype": "12-54",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3318.065",
+    "genotype": "12-71",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1700.785",
+    "genotype": "13-106",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "2922.055",
+    "genotype": "13-153",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "4209.37",
+    "genotype": "14-228",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1721.19",
+    "genotype": "14-236",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "3081.22",
+    "genotype": "14-242",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1586.25",
+    "genotype": "14-394",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "656.995",
+    "genotype": "14-99",
+    "location": "Central North FL",
+    "season": "2020"
+  },
+  {
+    "cumulative": "1297.274264",
+    "genotype": "14-394",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4046.044208",
+    "genotype": "17-78",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "8467.058133",
+    "genotype": "17-141",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7620.35232",
+    "genotype": "17-142",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "780.178928",
+    "genotype": "19-20",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "544.31088",
+    "genotype": "19-148",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "8164.6632",
+    "genotype": "13-216B",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4145.834536",
+    "genotype": "Arcadia",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4064.187904",
+    "genotype": "Avanti",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1315.41796",
+    "genotype": "Chickadee",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3356.58376",
+    "genotype": "Kestrel",
+    "location": "South FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "635.02936",
+    "genotype": "14-228",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1795.942409",
+    "genotype": "14-394",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2683.282541",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2490.505771",
+    "genotype": "Avanti",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3505.418766",
+    "genotype": "Winterbell",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3525.263434",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1750.583169",
+    "genotype": "Avanti",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3308.389568",
+    "genotype": "Winterbell",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2663.317749",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "0",
+    "genotype": "14-111",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "589.5922978",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "612.6047719",
+    "genotype": "Colossus",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1715.880639",
+    "genotype": "Sentinel",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5549.703014",
+    "genotype": "09-167",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1811.345651",
+    "genotype": "10-153",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2890.895563",
+    "genotype": "11-18",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3325.437082",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3657.466719",
+    "genotype": "12-179",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4782.375871",
+    "genotype": "12-271",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2159.553416",
+    "genotype": "Colossus",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4094.427397",
+    "genotype": "Sentinel",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6274.694867",
+    "genotype": "11-146",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4924.501489",
+    "genotype": "13-216A",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3288.5449",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1655.61226",
+    "genotype": "12-249",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1723.65112",
+    "genotype": "14-111",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "657.70898",
+    "genotype": "17-142",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2585.47668",
+    "genotype": "Colossus",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "861.82556",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7229.475",
+    "genotype": "11-18",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2912.925",
+    "genotype": "11-24",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4844.5",
+    "genotype": "12-8",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "269.19",
+    "genotype": "12-1",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3875.665",
+    "genotype": "09-167",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2849.375",
+    "genotype": "09-279",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "10364.765",
+    "genotype": "10-153",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6793.525",
+    "genotype": "10-162",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5362.635",
+    "genotype": "10-184",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2958.95",
+    "genotype": "10-196",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3276.93",
+    "genotype": "10-207",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5204.2",
+    "genotype": "10-289",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3097.44",
+    "genotype": "11-102",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4915.565",
+    "genotype": "11-112",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1747.62",
+    "genotype": "11-128",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5234.58",
+    "genotype": "11-199",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1398.33",
+    "genotype": "11-246",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7815.545",
+    "genotype": "Albus",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6846.99",
+    "genotype": "11-52",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6268.505",
+    "genotype": "12-113",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6514.215",
+    "genotype": "12-142",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1602.92",
+    "genotype": "12-155",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "8248.8425",
+    "genotype": "12-159",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4888.325",
+    "genotype": "12-160",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "88.63",
+    "genotype": "12-168",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7559.0375",
+    "genotype": "12-179",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5945.44",
+    "genotype": "12-179",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5334.485",
+    "genotype": "12-181",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2204.55",
+    "genotype": "12-190",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1259.59",
+    "genotype": "12-197",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7555.42",
+    "genotype": "12-213A",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4590.3825",
+    "genotype": "12-214",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4801.98",
+    "genotype": "12-229",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2581.9",
+    "genotype": "12-230",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "620.105",
+    "genotype": "12-253",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "9329.16",
+    "genotype": "12-255",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5859.535",
+    "genotype": "12-257",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6766.11",
+    "genotype": "12-271",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6444.955",
+    "genotype": "12-272",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3715.33",
+    "genotype": "12-276",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5972.785",
+    "genotype": "12-284",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4157.835",
+    "genotype": "12-292",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6343.29",
+    "genotype": "12-308",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4326.545",
+    "genotype": "12-33",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3691.355",
+    "genotype": "12-38",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4395.68",
+    "genotype": "12-492",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6772.185",
+    "genotype": "12-54",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4698.375",
+    "genotype": "12-71",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4586.575",
+    "genotype": "13-100",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5079.205",
+    "genotype": "13-106",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4172.55",
+    "genotype": "13-119",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3415.69",
+    "genotype": "13-121",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6430.23",
+    "genotype": "13-123",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7518.52",
+    "genotype": "13-141",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5124.335",
+    "genotype": "13-143",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "8788.6225",
+    "genotype": "13-149",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "8528.265",
+    "genotype": "13-153",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "665.395",
+    "genotype": "13-158",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1472.355",
+    "genotype": "13-161",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7773.46",
+    "genotype": "13-168",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6230.76",
+    "genotype": "13-181",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5303.215",
+    "genotype": "13-182",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5572.77",
+    "genotype": "13-187",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5652.26",
+    "genotype": "13-196",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4628.18",
+    "genotype": "13-216A",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6284.353333",
+    "genotype": "13-216B",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6165.54",
+    "genotype": "13-220",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1482.11",
+    "genotype": "13-79B",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3686.985",
+    "genotype": "13-899",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6516.53",
+    "genotype": "13-928",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4482.295",
+    "genotype": "13-942",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1746.68",
+    "genotype": "13-986",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1765.8",
+    "genotype": "14-111",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1377.42",
+    "genotype": "14-112",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4684.555",
+    "genotype": "14-131",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4399.14",
+    "genotype": "14-143",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5649.7",
+    "genotype": "14-170",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6153.205",
+    "genotype": "14-184",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1352.92",
+    "genotype": "14-222",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6491.215",
+    "genotype": "14-228",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "55.22",
+    "genotype": "14-229",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2746.51",
+    "genotype": "14-236",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4437.01",
+    "genotype": "14-24",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3327.42",
+    "genotype": "14-242",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "8414.225",
+    "genotype": "14-245",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4072.135",
+    "genotype": "14-25",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1123.085",
+    "genotype": "14-384",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4379.6",
+    "genotype": "14-386",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5473.38",
+    "genotype": "14-394",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2814.91",
+    "genotype": "14-83",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2775.665",
+    "genotype": "14-99",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3135.385",
+    "genotype": "15-136",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "20.575",
+    "genotype": "15-137",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4616.155",
+    "genotype": "15-143",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4146.025",
+    "genotype": "15-190",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "406.985",
+    "genotype": "15-231",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4096.64",
+    "genotype": "15-266",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1177.28",
+    "genotype": "15-35",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "371.625",
+    "genotype": "15-82",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1130.97",
+    "genotype": "15-91",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1496.94",
+    "genotype": "16-113",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "974.485",
+    "genotype": "16-134",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "562.8825",
+    "genotype": "16-165",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "495.93",
+    "genotype": "16-187",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "221.215",
+    "genotype": "16-52",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1356.71",
+    "genotype": "16-60",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "978.665",
+    "genotype": "16-90",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4758.4775",
+    "genotype": "17-141",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "8103.136667",
+    "genotype": "17-142",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5434.0675",
+    "genotype": "18-79",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2937.92",
+    "genotype": "Colossus",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1865.07",
+    "genotype": "Colossus",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2259.695",
+    "genotype": "Farthing",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3559.39",
+    "genotype": "Keecrisp",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "869.56",
+    "genotype": "Magnus",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "680",
+    "genotype": "Meadowlark",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1169.16",
+    "genotype": "Optimus",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2141.125",
+    "genotype": "Patrecia",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5457.89",
+    "genotype": "Sentinel",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2548.73",
+    "genotype": "Sentinel",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5039.66",
+    "genotype": "Ventura",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1131.87",
+    "genotype": "Vireo",
+    "location": "Central North FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3051.75",
+    "genotype": "05-185",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3035.56",
+    "genotype": "09-216",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1506.885",
+    "genotype": "10-179",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1452.195",
+    "genotype": "11-253",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1845.775",
+    "genotype": "Albus",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3845.04",
+    "genotype": "12-249",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2435.505833",
+    "genotype": "12-54",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2309.1",
+    "genotype": "17-142",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2944.335",
+    "genotype": "Sentinel",
+    "location": "Tunnels",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3248.165",
+    "genotype": "11-18",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2058.92",
+    "genotype": "11-24",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7424.18",
+    "genotype": "12-8",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "477.195",
+    "genotype": "09-279",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5849.56",
+    "genotype": "10-153",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5123.695",
+    "genotype": "10-162",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5514.245",
+    "genotype": "10-184",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3579.39",
+    "genotype": "10-196",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2642.355",
+    "genotype": "10-207",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7232.12",
+    "genotype": "10-289",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4048.375",
+    "genotype": "11-102",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4513.255",
+    "genotype": "11-112",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2337.68",
+    "genotype": "11-128",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3426.595",
+    "genotype": "11-199",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2021.29",
+    "genotype": "11-246",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7514.655",
+    "genotype": "Albus",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5124.775",
+    "genotype": "11-52",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "9691.235",
+    "genotype": "12-113",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3459.85",
+    "genotype": "12-142",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "676.405",
+    "genotype": "12-155",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4171.015",
+    "genotype": "12-160",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1378.665",
+    "genotype": "12-179",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1956.795",
+    "genotype": "12-181",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1145.93",
+    "genotype": "12-190",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "653.155",
+    "genotype": "12-197",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7039.065",
+    "genotype": "12-213A",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4972.725",
+    "genotype": "12-214",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4478.13",
+    "genotype": "12-229",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3313.525",
+    "genotype": "12-230",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "470.53",
+    "genotype": "12-253",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2182.435",
+    "genotype": "12-255",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3895.89",
+    "genotype": "12-257",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5044.325",
+    "genotype": "12-272",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "560.32",
+    "genotype": "12-276",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6655.28",
+    "genotype": "12-284",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3632.225",
+    "genotype": "12-292",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3560.66",
+    "genotype": "12-308",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3425.735",
+    "genotype": "12-33",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5292.455",
+    "genotype": "12-38",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5230.555",
+    "genotype": "12-54",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4179.615",
+    "genotype": "12-65",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "95.735",
+    "genotype": "12-71",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1082.115",
+    "genotype": "13-100",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3707.06",
+    "genotype": "13-106",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2231.59",
+    "genotype": "13-119",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4515.835",
+    "genotype": "13-121",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5729.4",
+    "genotype": "13-123",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3169.68",
+    "genotype": "13-143",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3049.135",
+    "genotype": "13-149",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6119.9",
+    "genotype": "13-153",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1295.19",
+    "genotype": "13-158",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3020.495",
+    "genotype": "13-161",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4297.785",
+    "genotype": "13-168",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2269.675",
+    "genotype": "13-182",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4459.925",
+    "genotype": "13-187",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1668.09",
+    "genotype": "13-196",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5482.085",
+    "genotype": "13-216A",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4863.435",
+    "genotype": "13-216B",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3758.315",
+    "genotype": "13-220",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "735.495",
+    "genotype": "13-79B",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4190.525",
+    "genotype": "13-899",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6844.445",
+    "genotype": "13-928",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1947.035",
+    "genotype": "13-942",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "802.615",
+    "genotype": "13-986",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2623.195",
+    "genotype": "14-111",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "812.915",
+    "genotype": "14-112",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2361.27",
+    "genotype": "14-131",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2786.245",
+    "genotype": "14-170",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6990.2",
+    "genotype": "14-184",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1728.155",
+    "genotype": "14-222",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2691.13",
+    "genotype": "14-228",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2476.67",
+    "genotype": "14-236",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2992.375",
+    "genotype": "14-24",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3191.585",
+    "genotype": "14-242",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3110.48",
+    "genotype": "14-245",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2257.79",
+    "genotype": "14-25",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "825.93",
+    "genotype": "14-384",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1506.11",
+    "genotype": "14-386",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4547.61",
+    "genotype": "14-394",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5726.98",
+    "genotype": "14-83",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1545.57",
+    "genotype": "14-99",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2153.72",
+    "genotype": "15-136",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "179.15",
+    "genotype": "15-137",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4534.29",
+    "genotype": "15-143",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3740.485",
+    "genotype": "15-190",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "485.455",
+    "genotype": "15-231",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2319.895",
+    "genotype": "15-266",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "689.13",
+    "genotype": "15-35",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "134.23",
+    "genotype": "15-82",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "807.07",
+    "genotype": "15-91",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "412.9",
+    "genotype": "16-113",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "762.07",
+    "genotype": "16-134",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "834.04",
+    "genotype": "16-165",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "574.165",
+    "genotype": "16-187",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "291.21",
+    "genotype": "16-52",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1817.21",
+    "genotype": "16-60",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "300.885",
+    "genotype": "16-90",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "5698.49",
+    "genotype": "Arcadia",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7992.17",
+    "genotype": "Avanti",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1429.08",
+    "genotype": "Colossus",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4164.775",
+    "genotype": "Emerald",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4338",
+    "genotype": "Endura",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "164.485",
+    "genotype": "Fla.Rose",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2434.54",
+    "genotype": "Indigocrisp",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2037.625",
+    "genotype": "Keecrisp",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4257.5",
+    "genotype": "Kestrel",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2065.06",
+    "genotype": "Kestrel",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3007.525",
+    "genotype": "Magnus",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3255.9",
+    "genotype": "Millenia",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "474.62",
+    "genotype": "Misty",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "3225.95",
+    "genotype": "Optimus",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2186.1",
+    "genotype": "Patrecia",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "415.42",
+    "genotype": "Patrecia",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "4617.23",
+    "genotype": "SanJoaquin",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2664.41",
+    "genotype": "SantaFe",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "7566.96",
+    "genotype": "Sentinel",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2921.345",
+    "genotype": "Sharpblue",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "2296.425",
+    "genotype": "Snowchaser",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "1654.42",
+    "genotype": "Wayne",
+    "location": "Citra FL",
+    "season": "2021"
+  },
+  {
+    "cumulative": "6531.73056",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5760.62348",
+    "genotype": "12-249",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2113.740584",
+    "genotype": "14-111",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3515.3411",
+    "genotype": "17-142",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3152.46718",
+    "genotype": "Colossus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4127.69084",
+    "genotype": "Optimus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2812.27288",
+    "genotype": "Avanti",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6100.81778",
+    "genotype": "Chickadee",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4195.7297",
+    "genotype": "Primadonna",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1852.712333",
+    "genotype": "14-384",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2664.099363",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4744.576504",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5579.18652",
+    "genotype": "Emerald",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4053.376644",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2283.837734",
+    "genotype": "14-384",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "825.538168",
+    "genotype": "Arcadia",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2482.006606",
+    "genotype": "Colossus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3962.492677",
+    "genotype": "Sentinel",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "376.481692",
+    "genotype": "Farthing",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "544.31088",
+    "genotype": "Winterbell",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "816.46632",
+    "genotype": "Optimus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4067.211853",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3299.128723",
+    "genotype": "Albus",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5898.213175",
+    "genotype": "Sentinel",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6126.521349",
+    "genotype": "Sentinel",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4439.157621",
+    "genotype": "Winterbell",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3059.027146",
+    "genotype": "Chickadee",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2752.171887",
+    "genotype": "Emerald",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2264.333261",
+    "genotype": "Kestrel",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2950.845358",
+    "genotype": "Springhigh",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4719.628922",
+    "genotype": "Vireo",
+    "location": "Central FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3062.655885",
+    "genotype": "16-192",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "11609.47068",
+    "genotype": "17-141",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "8066.006853",
+    "genotype": "17-142",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6761.928703",
+    "genotype": "19-6",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3345.924339",
+    "genotype": "19-60",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4011.797982",
+    "genotype": "Arcadia",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3884.565314",
+    "genotype": "Avanti",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2147.533218",
+    "genotype": "Avanti",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3029.54364",
+    "genotype": "Kestrel",
+    "location": "South FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5334.35",
+    "genotype": "12-8",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2317.15",
+    "genotype": "12-8",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3512.85",
+    "genotype": "16-10",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "903.45",
+    "genotype": "16-10",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3340.42",
+    "genotype": "18-11",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "865.05",
+    "genotype": "18-11",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1872.75",
+    "genotype": "06-19",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3042.765",
+    "genotype": "09-216",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3136.8",
+    "genotype": "09-279",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4035.3",
+    "genotype": "10-153",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4327.15",
+    "genotype": "10-153",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5889.45",
+    "genotype": "10-162",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5069.95",
+    "genotype": "10-162",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3643.8",
+    "genotype": "10-184",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3954.3",
+    "genotype": "10-184",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3055.4",
+    "genotype": "10-196",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1212.7",
+    "genotype": "10-196",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "641",
+    "genotype": "10-207",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2216.05",
+    "genotype": "10-207",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6217.3",
+    "genotype": "10-289",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5224.2",
+    "genotype": "10-289",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4186.75",
+    "genotype": "11-102",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2402.8",
+    "genotype": "11-102",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5619.8",
+    "genotype": "11-112",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3771",
+    "genotype": "11-112",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1944.5",
+    "genotype": "11-128",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2691.75",
+    "genotype": "11-128",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2495.7",
+    "genotype": "11-18",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "7577.55",
+    "genotype": "11-18",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2994.3",
+    "genotype": "11-182",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2133.1",
+    "genotype": "11-199",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2589.85",
+    "genotype": "11-199",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5423.1",
+    "genotype": "11-24",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5403.8",
+    "genotype": "11-24",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3455.45",
+    "genotype": "11-246",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1161.55",
+    "genotype": "11-246",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5761.1",
+    "genotype": "Albus",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4568.1",
+    "genotype": "Albus",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3765.4",
+    "genotype": "11-52",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3723.25",
+    "genotype": "11-52",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5425.35",
+    "genotype": "12-113",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5288",
+    "genotype": "12-113",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2206",
+    "genotype": "12-128",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3613.55",
+    "genotype": "12-142",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3428.05",
+    "genotype": "12-142",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4860.66",
+    "genotype": "12-155",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2370.75",
+    "genotype": "12-155",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4032.55",
+    "genotype": "12-159",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3666.95",
+    "genotype": "12-160",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4383.3",
+    "genotype": "12-160",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "721.05",
+    "genotype": "12-168",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6731.45",
+    "genotype": "12-179",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4082.87",
+    "genotype": "12-179",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2778",
+    "genotype": "12-179",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3951.65",
+    "genotype": "12-181",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3115.15",
+    "genotype": "12-181",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "755.8",
+    "genotype": "12-190",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3115.25",
+    "genotype": "12-190",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1260.765",
+    "genotype": "12-197",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1492.55",
+    "genotype": "12-197",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6730.25",
+    "genotype": "12-213A",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6044.2",
+    "genotype": "12-213A",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3572.1",
+    "genotype": "12-214",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6143.95",
+    "genotype": "12-214",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1679.65",
+    "genotype": "12-229",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2774.5",
+    "genotype": "12-229",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2535",
+    "genotype": "12-230",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4373.2",
+    "genotype": "12-230",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5508.55",
+    "genotype": "12-242",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2978.71",
+    "genotype": "12-249",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1815.905",
+    "genotype": "12-253",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2050.75",
+    "genotype": "12-253",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3837.45",
+    "genotype": "12-255",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "8654.9",
+    "genotype": "12-255",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3916.1",
+    "genotype": "12-257",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4141.05",
+    "genotype": "12-257",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5075.05",
+    "genotype": "12-259",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3354.45",
+    "genotype": "12-271",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3298.2",
+    "genotype": "12-272",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4050.3",
+    "genotype": "12-272",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "863.6",
+    "genotype": "12-276",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3932.15",
+    "genotype": "12-276",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5734.7",
+    "genotype": "12-284",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4388.5",
+    "genotype": "12-284",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2733.9",
+    "genotype": "12-292",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "7225.55",
+    "genotype": "12-292",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4718.35",
+    "genotype": "12-308",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5185.45",
+    "genotype": "12-308",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1948.65",
+    "genotype": "12-308",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3194.9",
+    "genotype": "12-33",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3469",
+    "genotype": "12-33",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3861.4",
+    "genotype": "12-38",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3526.55",
+    "genotype": "12-38",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5956.5",
+    "genotype": "12-492",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5884.505",
+    "genotype": "12-54",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5127.85",
+    "genotype": "12-54",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2460.25",
+    "genotype": "12-54",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1414.95",
+    "genotype": "12-65",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3816.05",
+    "genotype": "12-71",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3274.45",
+    "genotype": "13-100",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5016.1",
+    "genotype": "13-106",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6226.35",
+    "genotype": "13-106",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2052.65",
+    "genotype": "13-119",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2809.2",
+    "genotype": "13-119",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3509.8",
+    "genotype": "13-121",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2113.75",
+    "genotype": "13-121",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2301.2",
+    "genotype": "13-123",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3997.35",
+    "genotype": "13-123",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "7435.85",
+    "genotype": "13-141",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1687.195",
+    "genotype": "13-143",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4452.55",
+    "genotype": "13-143",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4407.63",
+    "genotype": "13-149",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3225.65",
+    "genotype": "13-149",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3456.85",
+    "genotype": "13-153",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4254.85",
+    "genotype": "13-153",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3609.35",
+    "genotype": "13-158",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1875.3",
+    "genotype": "13-158",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1608.65",
+    "genotype": "13-161",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4146.8",
+    "genotype": "13-161",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1211.9",
+    "genotype": "13-168",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5311.35",
+    "genotype": "13-168",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2788.53",
+    "genotype": "13-181",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3195.3",
+    "genotype": "13-181",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4721.15",
+    "genotype": "13-182",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4434.5",
+    "genotype": "13-182",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3608.9",
+    "genotype": "13-187",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6401",
+    "genotype": "13-187",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1029.85",
+    "genotype": "13-196",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4843.45",
+    "genotype": "13-196",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4504.1",
+    "genotype": "13-216A",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "7541.5",
+    "genotype": "13-216A",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6033.185",
+    "genotype": "13-216B",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "7604.1",
+    "genotype": "13-216B",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1880",
+    "genotype": "13-220",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5633.4",
+    "genotype": "13-220",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5115.25",
+    "genotype": "13-79B",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4852.6",
+    "genotype": "13-79B",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6624.2",
+    "genotype": "13-899",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5289.65",
+    "genotype": "13-899",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5552.85",
+    "genotype": "13-928",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5136.5",
+    "genotype": "13-928",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2543.25",
+    "genotype": "13-942",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3781.5",
+    "genotype": "13-942",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "594.85",
+    "genotype": "13-986",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1481.7",
+    "genotype": "13-986",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4745.73",
+    "genotype": "14-111",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3871.85",
+    "genotype": "14-111",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3668.8",
+    "genotype": "14-112",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2475.95",
+    "genotype": "14-112",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3692.4",
+    "genotype": "14-123",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1311.5",
+    "genotype": "14-123",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2169",
+    "genotype": "14-123",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3576.75",
+    "genotype": "14-131",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3240.35",
+    "genotype": "14-131",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1903.9",
+    "genotype": "14-143",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3422.25",
+    "genotype": "14-170",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5464",
+    "genotype": "14-170",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6668.4",
+    "genotype": "14-184",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4152.4",
+    "genotype": "14-184",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1973.65",
+    "genotype": "14-222",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1932.65",
+    "genotype": "14-222",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4992.55",
+    "genotype": "14-225",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "651.55",
+    "genotype": "14-228",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4019.8",
+    "genotype": "14-228",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2495.47",
+    "genotype": "14-236",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4718.3",
+    "genotype": "14-236",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5388.25",
+    "genotype": "14-24",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4794.7",
+    "genotype": "14-24",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1059.6",
+    "genotype": "14-242",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3603.75",
+    "genotype": "14-242",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "598",
+    "genotype": "14-245",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5178.7",
+    "genotype": "14-245",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2876.4",
+    "genotype": "14-25",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3147.25",
+    "genotype": "14-25",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2247.25",
+    "genotype": "14-384",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1604.4",
+    "genotype": "14-384",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3492.75",
+    "genotype": "14-386",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2163.765",
+    "genotype": "14-388",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "210.45",
+    "genotype": "14-388",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4467.945",
+    "genotype": "14-394",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5127.8",
+    "genotype": "14-394",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4856.4",
+    "genotype": "14-83",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4061.45",
+    "genotype": "14-83",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3133.445",
+    "genotype": "14-99",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3010.5",
+    "genotype": "14-99",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2329.95",
+    "genotype": "15-128",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1188.25",
+    "genotype": "15-136",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2675.3",
+    "genotype": "15-136",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1048.05",
+    "genotype": "15-137",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1334.35",
+    "genotype": "15-137",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2597.7",
+    "genotype": "15-143",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3289.35",
+    "genotype": "15-143",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4476.9",
+    "genotype": "15-172",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1276.7",
+    "genotype": "15-172",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1881.65",
+    "genotype": "15-190",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3504.4",
+    "genotype": "15-190",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1360",
+    "genotype": "15-231",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2079.35",
+    "genotype": "15-231",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1504.3",
+    "genotype": "15-266",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3240.6",
+    "genotype": "15-266",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "97.65",
+    "genotype": "15-270",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1607.8",
+    "genotype": "15-33",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1229.75",
+    "genotype": "15-33",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2426.45",
+    "genotype": "15-35",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2708.25",
+    "genotype": "15-35",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "21.2",
+    "genotype": "15-42",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1485.55",
+    "genotype": "15-82",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3186.4",
+    "genotype": "15-82",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3270",
+    "genotype": "15-91",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1296.85",
+    "genotype": "15-91",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "998.8",
+    "genotype": "15-92",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "84.55",
+    "genotype": "15-92",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2565.8",
+    "genotype": "16-113",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1517",
+    "genotype": "16-113",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3837.6",
+    "genotype": "16-134",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1584.75",
+    "genotype": "16-134",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4125.8",
+    "genotype": "16-165",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3364.7",
+    "genotype": "16-165",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "439.55",
+    "genotype": "16-177",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2785.8",
+    "genotype": "16-187",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2299.3",
+    "genotype": "16-187",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2111.645",
+    "genotype": "16-191",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "180.95",
+    "genotype": "16-191",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "353.2",
+    "genotype": "16-191",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5124",
+    "genotype": "16-192",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "880.35",
+    "genotype": "16-192",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2533.75",
+    "genotype": "16-192",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1221.95",
+    "genotype": "16-52",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1388.3",
+    "genotype": "16-52",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1902.4",
+    "genotype": "16-57",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5543.85",
+    "genotype": "16-60",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2626.6",
+    "genotype": "16-60",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1536.15",
+    "genotype": "16-82",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "209.25",
+    "genotype": "16-82",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3281.2",
+    "genotype": "16-90",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1855.6",
+    "genotype": "16-90",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3457.95",
+    "genotype": "17-141",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5705.15",
+    "genotype": "17-141",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "838.35",
+    "genotype": "17-141",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2564.15",
+    "genotype": "17-141",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3015.57",
+    "genotype": "17-142",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6609",
+    "genotype": "17-142",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "616.1",
+    "genotype": "17-142",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3293.1",
+    "genotype": "17-142",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1765.5",
+    "genotype": "17-142",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2272.95",
+    "genotype": "17-147",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "760.1",
+    "genotype": "17-147",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2697.75",
+    "genotype": "17-78",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1092.545",
+    "genotype": "17-78",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2836.05",
+    "genotype": "18-104",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "754.6",
+    "genotype": "18-104",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2275.4",
+    "genotype": "18-164",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "600.45",
+    "genotype": "18-164",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2487.45",
+    "genotype": "18-65",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "435",
+    "genotype": "18-65",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2942.9",
+    "genotype": "18-66",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "451.25",
+    "genotype": "18-66",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2124.075",
+    "genotype": "18-77",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "580.6",
+    "genotype": "18-77",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4569.6",
+    "genotype": "18-79",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "840.1",
+    "genotype": "18-79",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1588.1",
+    "genotype": "18-79",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3459.3",
+    "genotype": "Arcadia",
+    "location": "Tunnels",
+    "season": "2022"
+  },
+  {
+    "cumulative": "8246.6",
+    "genotype": "Arcadia",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "614.4",
+    "genotype": "Avanti",
+    "location": "Tunnels",
+    "season": "2022"
+  },
+  {
+    "cumulative": "7091.85",
+    "genotype": "Avanti",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1702.15",
+    "genotype": "Colossus",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1228.1",
+    "genotype": "Colossus",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5010.25",
+    "genotype": "Emerald",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1470.95",
+    "genotype": "Endura",
+    "location": "Tunnels",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5742.15",
+    "genotype": "Indigocrisp",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1625.55",
+    "genotype": "Keecrisp",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "734.2",
+    "genotype": "Kestrel",
+    "location": "Tunnels",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2931.65",
+    "genotype": "Kestrel",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1775.5",
+    "genotype": "Magnus",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3707.85",
+    "genotype": "Magnus",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2796.15",
+    "genotype": "Optimus",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3335.35",
+    "genotype": "Optimus",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3458.6",
+    "genotype": "Patrecia",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1552.5",
+    "genotype": "Patrecia",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6998.65",
+    "genotype": "SanJoaquin",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6282.85",
+    "genotype": "Sentinel",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6125.4",
+    "genotype": "Sentinel",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6523.75",
+    "genotype": "Sentinel",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1011.05",
+    "genotype": "Springhigh",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "7462.75",
+    "genotype": "Vireo",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2882.8",
+    "genotype": "Vireo",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "2230.85",
+    "genotype": "Wayne",
+    "location": "Citra FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "1820.85",
+    "genotype": "12-229",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4341",
+    "genotype": "12-230",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5528.5",
+    "genotype": "14-245",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5482.7",
+    "genotype": "17-123",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "6019.95",
+    "genotype": "17-124",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3957",
+    "genotype": "17-142",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3337.55",
+    "genotype": "17-145",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "4137.45",
+    "genotype": "17-168",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "5454",
+    "genotype": "17-71",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3117.7",
+    "genotype": "17-76",
+    "location": "Central North FL",
+    "season": "2022"
+  },
+  {
+    "cumulative": "3877.75",
+    "genotype": "17-81",
+    "location": "Central North FL",
+    "season": "2022"
+  }
+]
