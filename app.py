@@ -25,6 +25,60 @@ class EmailWhitelist(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
 
+class Rank(db.Model):
+    __tablename__ = 'ranks'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    Flavor_Mean_plus = db.Column(db.Float, nullable=True)
+    Selection_Index_2022 = db.Column(db.Float, nullable=True)
+    Yield_Greens_plus = db.Column(db.Float, nullable=True)
+    avg_firm_plus = db.Column(db.Float, nullable=True)
+    brix_plus = db.Column(db.Float, nullable=True)
+    genotype = db.Column(db.String(50), nullable=False)
+    location = db.Column(db.String(50), nullable=True)
+    ph_plus = db.Column(db.Float, nullable=True)
+    ranking_SI22 = db.Column(db.Float, nullable=True)
+    rkn_Flavor_Mean_plus = db.Column(db.Float, nullable=True)
+    rkn_Yield_Greens_plus = db.Column(db.Float, nullable=True)
+    rkn_avg_firm_plus = db.Column(db.Float, nullable=True)
+    rkn_brix_plus = db.Column(db.Float, nullable=True)
+    rkn_ph_plus = db.Column(db.Float, nullable=True)
+    rkn_weight_plus = db.Column(db.Float, nullable=True)
+    season = db.Column(db.String(10), nullable=True)
+    weight_plus = db.Column(db.Float, nullable=True)
+
+class Yield(db.Model):
+    __tablename__ = 'yield'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    cumulative = db.Column(db.Float, nullable=True)
+    genotype = db.Column(db.String(50), nullable=False)
+    location = db.Column(db.String(50), nullable=True)
+    season = db.Column(db.String(10), nullable=True)
+
+class Score(db.Model):
+    __tablename__ = 'scores'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    flavor_mean = db.Column(db.Float, nullable=True)
+    genotype = db.Column(db.String(50), nullable=False)
+    location = db.Column(db.String(50), nullable=True)
+    season = db.Column(db.String(10), nullable=True)
+
+class FQ(db.Model):
+    __tablename__ = 'fruit_quality'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    avg_firm = db.Column(db.Float, nullable=True)
+    avg_size = db.Column(db.Float, nullable=True)
+    brix = db.Column(db.Float, nullable=True)
+    genotype = db.Column(db.String(50), nullable=False)
+    location = db.Column(db.String(50), nullable=True)
+    ph = db.Column(db.Float, nullable=True)
+    season = db.Column(db.String(10), nullable=True)
+    tta = db.Column(db.Float, nullable=True)
+    weight = db.Column(db.Float, nullable=True)
+
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
@@ -81,11 +135,49 @@ def update_user():
         db.session.add(new_user)
         db.session.commit()
         return jsonify({'status': 'user_created_successfully'}), 201
+  
+@app.route('/search_genotype', methods=['GET'])
+def search_genotype():
+    # Get the search term from the request arguments
+    genotype_query = request.args.get('genotype', '').lower()
 
-    
-@app.route('/api/test', methods=['GET'])
-def test():
-    return jsonify({"message": "Test successful"}), 200
+    if not genotype_query:
+        return jsonify({"error": "Genotype parameter is missing"}), 400
+
+    # Using SQLAlchemy's ilike for case-insensitive partial matching
+    search_pattern = f"%{genotype_query}%"
+
+    # Query each table for matching genotype
+    rank_results = Rank.query.filter(Rank.genotype.ilike(search_pattern)).all()
+    yield_results = Yield.query.filter(Yield.genotype.ilike(search_pattern)).all()
+    score_results = Score.query.filter(Score.genotype.ilike(search_pattern)).all()
+    fq_results = FQ.query.filter(FQ.genotype.ilike(search_pattern)).all()
+
+    # Helper function to serialize a model instance into a dictionary
+    def serialize_model(model):
+        # Use Python-friendly attribute names, especially for columns with special characters
+        serialized_data = {}
+        for column in model.__table__.columns:
+            # Use the attribute key that maps to the column in the database
+            column_name = column.key
+            serialized_data[column_name] = getattr(model, column_name)
+        return serialized_data
+
+    # Serialize the results
+    rank_data = [serialize_model(r) for r in rank_results]
+    yield_data = [serialize_model(y) for y in yield_results]
+    score_data = [serialize_model(s) for s in score_results]
+    fq_data = [serialize_model(f) for f in fq_results]
+
+    # Combine all results into one response
+    response_data = {
+        "rank_results": rank_data,
+        "yield_results": yield_data,
+        "score_results": score_data,
+        "fq_results": fq_data
+    }
+
+    return jsonify(response_data), 200
 
 @app.after_request
 def after_request(response):
