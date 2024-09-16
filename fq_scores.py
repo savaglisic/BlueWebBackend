@@ -11,9 +11,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-# Define the Score table model
-class Score(db.Model):
-    __tablename__ = 'fq_scores'
+# Define the 
+class FQ(db.Model):
+    __tablename__ = 'fruit_quality'
     
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     avg_firm = db.Column(db.Float, nullable=True)
@@ -43,8 +43,8 @@ def load_json_to_db(json_file):
         tta = float(entry.get('tta', 0) or 0) if entry.get('tta') else None
         weight = float(entry.get('weight', 0) or 0)
         
-        # Create a new Score object
-        score = Score(
+        # Create a new 
+        fq = FQ(
             avg_firm=avg_firm,
             avg_size=avg_size,
             brix=brix,
@@ -56,8 +56,8 @@ def load_json_to_db(json_file):
             weight=weight
         )
         
-        # Add the score object to the database session
-        db.session.add(score)
+
+        db.session.add(fq)
     
     # Commit all the changes to the database
     db.session.commit()
@@ -67,6 +67,6 @@ with app.app_context():
     db.create_all()  # Create the table if it doesn't exist
 
     # Load data from scores.json to the MySQL database
-    load_json_to_db('scores.json')
+    load_json_to_db('fq_scores.json')
 
     print("Data has been loaded into the MySQL database.")
