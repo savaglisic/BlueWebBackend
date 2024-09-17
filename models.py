@@ -98,8 +98,8 @@ class PlantData(db.Model):
     avg_diameter = db.Column(db.Float, nullable=True)
     sd_firmness = db.Column(db.Float, nullable=True)
     sd_diameter = db.Column(db.Float, nullable=True)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)  
-    week = db.Column(db.Integer, nullable=False, default=lambda: datetime.utcnow().isocalendar()[1]) 
+    timestamp = db.Column(db.DateTime, default=datetime.datetime.now, nullable=False)
+    week = db.Column(db.Integer, nullable=False, default=lambda: datetime.datetime.now().isocalendar()[1])
 
     def __init__(self, barcode, genotype, stage=None, site=None, block=None, project=None, post_harvest=None, bush_plant_number=None, notes=None, mass=None, number_of_berries=None, ph=None, brix=None, juicemass=None, tta=None, mladded=None, avg_diamater=None, avg_firmness=None, sd_firmness=None, sd_diamater=None):
         self.barcode = barcode
@@ -122,6 +122,6 @@ class PlantData(db.Model):
         self.avg_diameter = avg_diamater
         self.sd_firmness = sd_firmness
         self.sd_diameter = sd_diamater
-        self.timestamp = datetime.utcnow()
-        self.week = datetime.utcnow().isocalendar()[1]
+        self.timestamp = datetime.datetime.now()
+        self.week = datetime.datetime.now().isocalendar()[1]
 
