@@ -1,3 +1,4 @@
+import datetime
 from flask_sqlalchemy import SQLAlchemy
 
 # Initialize SQLAlchemy (db) instance here, but actual app configuration happens in main file
@@ -72,3 +73,55 @@ class FQ(db.Model):
     season = db.Column(db.String(10), nullable=True)
     tta = db.Column(db.Float, nullable=True)
     weight = db.Column(db.Float, nullable=True)
+
+class PlantData(db.Model):
+    __tablename__ = 'plant_data'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    barcode = db.Column(db.String(100), nullable=False)  
+    genotype = db.Column(db.String(100), nullable=False) 
+    stage = db.Column(db.String(50), nullable=True)  
+    site = db.Column(db.String(50), nullable=True)  
+    block = db.Column(db.String(50), nullable=True)  
+    project = db.Column(db.String(50), nullable=True)  
+    post_harvest = db.Column(db.String(50), nullable=True)  
+    bush_plant_number = db.Column(db.String(100), nullable=True)  
+    notes = db.Column(db.String(255), nullable=True)  
+    mass = db.Column(db.Float, nullable=True)  
+    number_of_berries = db.Column(db.Integer, nullable=True)  
+    ph = db.Column(db.Float, nullable=True)
+    brix = db.Column(db.Float, nullable=True)
+    juicemass = db.Column(db.Float, nullable=True)
+    tta = db.Column(db.Float, nullable=True)
+    mladded = db.Column(db.Float, nullable=True)
+    avg_firmness = db.Column(db.Float, nullable=True)
+    avg_diameter = db.Column(db.Float, nullable=True)
+    sd_firmness = db.Column(db.Float, nullable=True)
+    sd_diameter = db.Column(db.Float, nullable=True)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)  
+    week = db.Column(db.Integer, nullable=False, default=lambda: datetime.utcnow().isocalendar()[1]) 
+
+    def __init__(self, barcode, genotype, stage=None, site=None, block=None, project=None, post_harvest=None, bush_plant_number=None, notes=None, mass=None, number_of_berries=None, ph=None, brix=None, juicemass=None, tta=None, mladded=None, avg_diamater=None, avg_firmness=None, sd_firmness=None, sd_diamater=None):
+        self.barcode = barcode
+        self.genotype = genotype
+        self.stage = stage
+        self.site = site
+        self.block = block
+        self.project = project
+        self.post_harvest = post_harvest
+        self.bush_plant_number = bush_plant_number
+        self.notes = notes
+        self.mass = mass
+        self.number_of_berries = number_of_berries
+        self.ph = ph
+        self.brix = brix
+        self.juicemass = juicemass
+        self.tta = tta
+        self.mladded = mladded
+        self.avg_firmness = avg_firmness
+        self.avg_diameter = avg_diamater
+        self.sd_firmness = sd_firmness
+        self.sd_diameter = sd_diamater
+        self.timestamp = datetime.utcnow()
+        self.week = datetime.utcnow().isocalendar()[1]
+
