@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-from models import db, User, EmailWhitelist, Rank, Yield, Score, FQ  # Import models from models.py
+from models import db, User, EmailWhitelist, Rank, Yield, Score, FQ  
 
 app = Flask(__name__)
 CORS(app)
