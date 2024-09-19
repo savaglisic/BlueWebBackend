@@ -129,3 +129,11 @@ class PlantData(db.Model):
         self.timestamp = datetime.datetime.now()
         self.week = datetime.datetime.now().isocalendar()[1]
 
+class Genotype(db.Model):
+    __tablename__ = 'genotypes'
+
+    id = db.Column(db.Integer, primary_key=True)
+    genotype = db.Column(db.String(255), unique=True, nullable=False)  
+
+    def __repr__(self):
+        return f'<Genotype {self.genotype}>'

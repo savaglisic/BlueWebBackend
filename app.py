@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-from models import db, User, EmailWhitelist, Rank, Yield, Score, FQ  
+from models import Genotype, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
 
 app = Flask(__name__)
 CORS(app)
@@ -113,6 +113,31 @@ def search_genotype():
     }
 
     return jsonify(response_data), 200
+
+@app.route('/populate_genotypes', methods=['POST'])
+def populate_genotypes():
+    # Get distinct genotypes from each table
+    rank_genotypes = db.session.query(Rank.genotype).distinct()
+    yield_genotypes = db.session.query(Yield.genotype).distinct()
+    score_genotypes = db.session.query(Score.genotype).distinct()
+    fq_genotypes = db.session.query(FQ.genotype).distinct()
+
+    # Combine all genotypes into a set to remove duplicates
+    all_genotypes = set()
+    all_genotypes.update([r.genotype for r in rank_genotypes])
+    all_genotypes.update([y.genotype for y in yield_genotypes])
+    all_genotypes.update([s.genotype for s in score_genotypes])
+    all_genotypes.update([f.genotype for f in fq_genotypes])
+
+    # Insert unique genotypes into the Genotypes table
+    for genotype_str in all_genotypes:
+        if not Genotype.query.filter_by(genotype=genotype_str).first():
+            new_genotype = Genotype(genotype=genotype_str)
+            db.session.add(new_genotype)
+
+    db.session.commit()
+
+    return jsonify({"message": "Genotypes table populated with unique values"}), 201
 
 @app.after_request
 def after_request(response):
