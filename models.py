@@ -79,7 +79,7 @@ class PlantData(db.Model):
     
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     barcode = db.Column(db.String(100), nullable=False)  
-    genotype = db.Column(db.String(100), nullable=False) 
+    genotype = db.Column(db.String(100), nullable=True) 
     stage = db.Column(db.String(50), nullable=True)  
     site = db.Column(db.String(50), nullable=True)  
     block = db.Column(db.String(50), nullable=True)  
