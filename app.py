@@ -162,6 +162,30 @@ def add_email_to_whitelist():
 
     return jsonify({'status': 'success', 'message': 'Email added to whitelist'}), 201
 
+@app.route('/email_whitelist/<string:email>', methods=['DELETE'])
+def delete_email_from_whitelist(email):
+    email_record = EmailWhitelist.query.filter_by(email=email).first()
+
+    if not email_record:
+        return jsonify({'status': 'error', 'message': 'Email not found in whitelist'}), 404
+
+    db.session.delete(email_record)
+    db.session.commit()
+
+    return jsonify({'status': 'success', 'message': 'Email removed from whitelist'}), 200
+
+@app.route('/option_config/<int:id>', methods=['DELETE'])
+def delete_option_config(id):
+    option = OptionConfig.query.filter_by(id=id).first()
+
+    if not option:
+        return jsonify({'status': 'error', 'message': 'OptionConfig not found'}), 404
+
+    db.session.delete(option)
+    db.session.commit()
+
+    return jsonify({'status': 'success', 'message': 'OptionConfig deleted successfully'}), 200
+
 @app.route('/option_config', methods=['GET'])
 def get_option_configs():
     options = OptionConfig.query.all()
