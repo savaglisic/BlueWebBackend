@@ -1,8 +1,7 @@
 from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-from models import Genotype, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
+from models import Genotype, OptionConfig, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
 
 app = Flask(__name__)
 CORS(app)
@@ -138,6 +137,63 @@ def populate_genotypes():
     db.session.commit()
 
     return jsonify({"message": "Genotypes table populated with unique values"}), 201
+
+@app.route('/email_whitelist', methods=['GET'])
+def get_email_whitelist():
+    emails = EmailWhitelist.query.with_entities(EmailWhitelist.email).all()
+    email_list = [email[0] for email in emails]   
+    return jsonify({'emails': email_list}), 200
+
+@app.route('/email_whitelist', methods=['POST'])
+def add_email_to_whitelist():
+    data = request.json
+    email = data.get('email')
+
+    if not email:
+        return jsonify({'status': 'error', 'message': 'Email is required'}), 400
+
+    existing_email = EmailWhitelist.query.filter_by(email=email).first()
+    if existing_email:
+        return jsonify({'status': 'error', 'message': 'Email already whitelisted'}), 400
+
+    new_email = EmailWhitelist(email=email)
+    db.session.add(new_email)
+    db.session.commit()
+
+    return jsonify({'status': 'success', 'message': 'Email added to whitelist'}), 201
+
+@app.route('/option_config', methods=['GET'])
+def get_option_configs():
+    options = OptionConfig.query.all()
+    options_list = [
+        {
+            'id': option.id,
+            'option_type': option.option_type,
+            'option_text': option.option_text
+        } for option in options
+    ]
+    
+    return jsonify({'options': options_list}), 200
+
+@app.route('/option_config/<int:id>', methods=['PUT'])
+def update_option_config(id):
+    data = request.json
+    option_type = data.get('option_type')
+    option_text = data.get('option_text')
+
+    if not option_type or not option_text:
+        return jsonify({'status': 'error', 'message': 'option_type and option_text are required'}), 400
+
+    option = OptionConfig.query.filter_by(id=id).first()
+
+    if not option:
+        return jsonify({'status': 'error', 'message': 'OptionConfig not found'}), 404
+
+    option.option_type = option_type
+    option.option_text = option_text
+    db.session.commit()
+
+    return jsonify({'status': 'success', 'message': 'OptionConfig updated successfully'}), 200
 
 @app.after_request
 def after_request(response):
