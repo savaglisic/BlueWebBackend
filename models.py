@@ -18,8 +18,8 @@ class EmailWhitelist(db.Model):
 
 class OptionConfig(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    option_type = db.Column(db.String(120), unique=True, nullable=False)
-    option_text = db.Column(db.String(120), unique=True, nullable=False)
+    option_type = db.Column(db.String(120), unique=False, nullable=False)
+    option_text = db.Column(db.String(120), unique=False, nullable=False)
 
 # Define the Rank model
 class Rank(db.Model):

@@ -175,8 +175,8 @@ def get_option_configs():
     
     return jsonify({'options': options_list}), 200
 
-@app.route('/option_config/<int:id>', methods=['PUT'])
-def update_option_config(id):
+@app.route('/option_config', methods=['POST'])
+def add_option_config():
     data = request.json
     option_type = data.get('option_type')
     option_text = data.get('option_text')
@@ -184,16 +184,11 @@ def update_option_config(id):
     if not option_type or not option_text:
         return jsonify({'status': 'error', 'message': 'option_type and option_text are required'}), 400
 
-    option = OptionConfig.query.filter_by(id=id).first()
-
-    if not option:
-        return jsonify({'status': 'error', 'message': 'OptionConfig not found'}), 404
-
-    option.option_type = option_type
-    option.option_text = option_text
+    new_option = OptionConfig(option_type=option_type, option_text=option_text)
+    db.session.add(new_option)
     db.session.commit()
 
-    return jsonify({'status': 'success', 'message': 'OptionConfig updated successfully'}), 200
+    return jsonify({'status': 'success', 'id': new_option.id, 'message': 'OptionConfig added successfully'}), 201
 
 @app.after_request
 def after_request(response):
