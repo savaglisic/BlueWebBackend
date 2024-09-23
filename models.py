@@ -108,7 +108,7 @@ class PlantData(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.datetime.now, nullable=False)
     week = db.Column(db.Integer, nullable=False, default=lambda: datetime.datetime.now().isocalendar()[1])
 
-    def __init__(self, barcode, genotype, stage=None, site=None, block=None, project=None, post_harvest=None, bush_plant_number=None, notes=None, mass=None, number_of_berries=None, ph=None, brix=None, juicemass=None, tta=None, mladded=None, avg_diameter=None, avg_firmness=None, sd_firmness=None, sd_diameter=None, box=None, bush=None):
+    def __init__(self, barcode, genotype, stage=None, site=None, block=None, project=None, post_harvest=None, bush_plant_number=None, notes=None, mass=None, number_of_berries=None, x_berry_mass=None, ph=None, brix=None, juicemass=None, tta=None, mladded=None, avg_diameter=None, avg_firmness=None, sd_firmness=None, sd_diameter=None, box=None, bush=None):
         self.barcode = barcode
         self.genotype = genotype
         self.stage = stage

@@ -217,41 +217,113 @@ def add_option_config():
 @app.route('/add_plant_data', methods=['POST'])
 def add_plant_data():
     data = request.json
-    
+    barcode = data.get('barcode')
+
+    if not barcode:
+        return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
+
     try:
-        new_plant_data = PlantData(
-            barcode=data.get('barcode'),
-            genotype=data.get('genotype'),
-            stage=data.get('stage'),
-            site=data.get('site'),
-            block=data.get('block'),
-            project=data.get('project'),
-            post_harvest=data.get('post_harvest'),
-            bush_plant_number=data.get('bush_plant_number'),
-            notes=data.get('notes'),
-            mass=data.get('mass'),
-            x_berry_mass=data.get('x_berry_mass'),
-            number_of_berries=data.get('number_of_berries'),
-            ph=data.get('ph'),
-            brix=data.get('brix'),
-            juicemass=data.get('juicemass'),
-            tta=data.get('tta'),
-            mladded=data.get('mladded'),
-            avg_firmness=data.get('avg_firmness'),
-            avg_diameter=data.get('avg_diameter'),
-            sd_firmness=data.get('sd_firmness'),
-            sd_diameter=data.get('sd_diameter'),
-            box=data.get('box'),
-        )
-        
-        db.session.add(new_plant_data)
-        db.session.commit()
-        
-        return jsonify({'status': 'success', 'message': 'Plant data added successfully!'}), 201
-    
+        # Check if a plant with the given barcode already exists
+        plant_data = PlantData.query.filter_by(barcode=barcode).first()
+
+        if plant_data:
+            # Update the existing plant entry
+            plant_data.genotype = data.get('genotype')
+            plant_data.stage = data.get('stage')
+            plant_data.site = data.get('site')
+            plant_data.block = data.get('block')
+            plant_data.project = data.get('project')
+            plant_data.post_harvest = data.get('post_harvest')
+            plant_data.bush_plant_number = data.get('bush_plant_number')
+            plant_data.notes = data.get('notes')
+            plant_data.mass = data.get('mass')
+            plant_data.x_berry_mass = data.get('x_berry_mass')
+            plant_data.number_of_berries = data.get('number_of_berries')
+            plant_data.ph = data.get('ph')
+            plant_data.brix = data.get('brix')
+            plant_data.juicemass = data.get('juicemass')
+            plant_data.tta = data.get('tta')
+            plant_data.mladded = data.get('mladded')
+            plant_data.avg_firmness = data.get('avg_firmness')
+            plant_data.avg_diameter = data.get('avg_diameter')
+            plant_data.sd_firmness = data.get('sd_firmness')
+            plant_data.sd_diameter = data.get('sd_diameter')
+            plant_data.box = data.get('box')
+
+            db.session.commit()
+
+            return jsonify({'status': 'success', 'message': 'Plant data updated successfully!'}), 200
+        else:
+            new_plant_data = PlantData(
+                barcode=barcode,
+                genotype=data.get('genotype'),
+                stage=data.get('stage'),
+                site=data.get('site'),
+                block=data.get('block'),
+                project=data.get('project'),
+                post_harvest=data.get('post_harvest'),
+                bush_plant_number=data.get('bush_plant_number'),
+                notes=data.get('notes'),
+                mass=data.get('mass'),
+                x_berry_mass=data.get('x_berry_mass'),
+                number_of_berries=data.get('number_of_berries'),
+                ph=data.get('ph'),
+                brix=data.get('brix'),
+                juicemass=data.get('juicemass'),
+                tta=data.get('tta'),
+                mladded=data.get('mladded'),
+                avg_firmness=data.get('avg_firmness'),
+                avg_diameter=data.get('avg_diameter'),
+                sd_firmness=data.get('sd_firmness'),
+                sd_diameter=data.get('sd_diameter'),
+                box=data.get('box'),
+            )
+
+            db.session.add(new_plant_data)
+            db.session.commit()
+
+            return jsonify({'status': 'success', 'message': 'Plant data added successfully!'}), 201
+
     except Exception as e:
         db.session.rollback()
         return jsonify({'status': 'error', 'message': str(e)}), 400
+    
+@app.route('/check_barcode', methods=['POST'])
+def check_barcode():
+    barcode = request.json.get('barcode')
+    try:
+        plant_data = PlantData.query.filter_by(barcode=barcode).first()
+        if plant_data:
+            return jsonify({
+                'status': 'success',
+                'data': {
+                    'genotype': plant_data.genotype,
+                    'stage': plant_data.stage,
+                    'site': plant_data.site,
+                    'block': plant_data.block,
+                    'project': plant_data.project,
+                    'post_harvest': plant_data.post_harvest,
+                    'bush_plant_number': plant_data.bush_plant_number,
+                    'notes': plant_data.notes,
+                    'mass': plant_data.mass,
+                    'number_of_berries': plant_data.number_of_berries,
+                    'x_berry_mass' : plant_data.x_berry_mass,
+                    'ph': plant_data.ph,
+                    'brix': plant_data.brix,
+                    'juicemass': plant_data.juicemass,
+                    'tta': plant_data.tta,
+                    'mladded': plant_data.mladded,
+                    'avg_firmness': plant_data.avg_firmness,
+                    'avg_diameter': plant_data.avg_diameter,
+                    'sd_firmness': plant_data.sd_firmness,
+                    'sd_diameter': plant_data.sd_diameter,
+                    'box': plant_data.box
+                }
+            }), 200
+        else:
+            return jsonify({'status': 'not_found'}), 404
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
 
 @app.after_request
 def after_request(response):
