@@ -330,7 +330,6 @@ def check_barcode():
 def spell_check():
     data = request.get_json()
     input_string = data.get('input_string', '')
-
     if not input_string:
         return jsonify({"error": "Input string is required"}), 400
 
