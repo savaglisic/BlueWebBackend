@@ -214,6 +214,45 @@ def add_option_config():
 
     return jsonify({'status': 'success', 'id': new_option.id, 'message': 'OptionConfig added successfully'}), 201
 
+@app.route('/add_plant_data', methods=['POST'])
+def add_plant_data():
+    data = request.json
+    
+    try:
+        new_plant_data = PlantData(
+            barcode=data.get('barcode'),
+            genotype=data.get('genotype'),
+            stage=data.get('stage'),
+            site=data.get('site'),
+            block=data.get('block'),
+            project=data.get('project'),
+            post_harvest=data.get('post_harvest'),
+            bush_plant_number=data.get('bush_plant_number'),
+            notes=data.get('notes'),
+            mass=data.get('mass'),
+            number_of_berries=data.get('number_of_berries'),
+            ph=data.get('ph'),
+            brix=data.get('brix'),
+            juicemass=data.get('juicemass'),
+            tta=data.get('tta'),
+            mladded=data.get('mladded'),
+            avg_firmness=data.get('avg_firmness'),
+            avg_diameter=data.get('avg_diameter'),
+            sd_firmness=data.get('sd_firmness'),
+            sd_diameter=data.get('sd_diameter'),
+            box=data.get('box'),
+            bush=data.get('bush')
+        )
+        
+        db.session.add(new_plant_data)
+        db.session.commit()
+        
+        return jsonify({'status': 'success', 'message': 'Plant data added successfully!'}), 201
+    
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'status': 'error', 'message': str(e)}), 400
+
 @app.after_request
 def after_request(response):
     response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5173')
