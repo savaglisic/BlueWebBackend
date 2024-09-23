@@ -120,6 +120,7 @@ class PlantData(db.Model):
         self.notes = notes
         self.mass = mass
         self.number_of_berries = number_of_berries
+        self.x_berry_mass = x_berry_mass
         self.ph = ph
         self.brix = brix
         self.juicemass = juicemass
