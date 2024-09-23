@@ -1,3 +1,4 @@
+from difflib import get_close_matches
 from flask import Flask, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
@@ -324,6 +325,28 @@ def check_barcode():
             return jsonify({'status': 'not_found'}), 404
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 500
+    
+@app.route('/spell_check', methods=['POST'])
+def spell_check():
+    data = request.get_json()
+    input_string = data.get('input_string', '')
+
+    if not input_string:
+        return jsonify({"error": "Input string is required"}), 400
+
+    exact_match = Genotype.query.filter(db.func.lower(Genotype.genotype) == input_string.lower()).first()
+
+    if exact_match:
+        return jsonify({"message": "Exact match found", "genotype": exact_match.genotype}), 200
+
+    all_genotypes = [genotype.genotype for genotype in Genotype.query.all()]
+
+    closest_matches = get_close_matches(input_string, all_genotypes, n=1, cutoff=0.6)
+
+    if closest_matches:
+        return jsonify({"message": "Partial match found", "genotype": closest_matches[0], "note": "Partial match"}), 200
+    else:
+        return jsonify({"message": "No match found"}), 404
 
 @app.after_request
 def after_request(response):
