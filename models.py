@@ -83,7 +83,7 @@ class PlantData(db.Model):
     __tablename__ = 'plant_data'
     
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    barcode = db.Column(db.String(100), nullable=False)  
+    barcode = db.Column(db.String(100), nullable=False, unique=True)  
     genotype = db.Column(db.String(100), nullable=True) 
     stage = db.Column(db.String(50), nullable=True)  
     site = db.Column(db.String(50), nullable=True)  
@@ -96,7 +96,6 @@ class PlantData(db.Model):
     x_berry_mass = db.Column(db.Float, nullable=True)   
     number_of_berries = db.Column(db.Integer, nullable=True)
     box = db.Column(db.Integer, nullable=True)    
-    bush = db.Column(db.Integer, nullable=True)  
     ph = db.Column(db.Float, nullable=True)
     brix = db.Column(db.Float, nullable=True)
     juicemass = db.Column(db.Float, nullable=True)

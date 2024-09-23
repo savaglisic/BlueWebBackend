@@ -230,6 +230,7 @@ def add_plant_data():
             bush_plant_number=data.get('bush_plant_number'),
             notes=data.get('notes'),
             mass=data.get('mass'),
+            x_berry_mass=data.get('x_berry_mass'),
             number_of_berries=data.get('number_of_berries'),
             ph=data.get('ph'),
             brix=data.get('brix'),
@@ -241,7 +242,6 @@ def add_plant_data():
             sd_firmness=data.get('sd_firmness'),
             sd_diameter=data.get('sd_diameter'),
             box=data.get('box'),
-            bush=data.get('bush')
         )
         
         db.session.add(new_plant_data)
