@@ -318,7 +318,8 @@ def check_barcode():
                     'avg_diameter': plant_data.avg_diameter,
                     'sd_firmness': plant_data.sd_firmness,
                     'sd_diameter': plant_data.sd_diameter,
-                    'box': plant_data.box
+                    'box': plant_data.box,
+                    'barcode': plant_data.barcode
                 }
             }), 200
         else:
