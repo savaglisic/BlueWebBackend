@@ -215,80 +215,6 @@ def add_option_config():
 
     return jsonify({'status': 'success', 'id': new_option.id, 'message': 'OptionConfig added successfully'}), 201
 
-@app.route('/add_plant_data', methods=['POST'])
-def add_plant_data():
-    data = request.json
-    barcode = data.get('barcode')
-
-    if not barcode:
-        return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
-
-    try:
-        # Check if a plant with the given barcode already exists
-        plant_data = PlantData.query.filter_by(barcode=barcode).first()
-
-        if plant_data:
-            # Update the existing plant entry
-            plant_data.genotype = data.get('genotype')
-            plant_data.stage = data.get('stage')
-            plant_data.site = data.get('site')
-            plant_data.block = data.get('block')
-            plant_data.project = data.get('project')
-            plant_data.post_harvest = data.get('post_harvest')
-            plant_data.bush_plant_number = data.get('bush_plant_number')
-            plant_data.notes = data.get('notes')
-            plant_data.mass = data.get('mass')
-            plant_data.x_berry_mass = data.get('x_berry_mass')
-            plant_data.number_of_berries = data.get('number_of_berries')
-            plant_data.ph = data.get('ph')
-            plant_data.brix = data.get('brix')
-            plant_data.juicemass = data.get('juicemass')
-            plant_data.tta = data.get('tta')
-            plant_data.mladded = data.get('mladded')
-            plant_data.avg_firmness = data.get('avg_firmness')
-            plant_data.avg_diameter = data.get('avg_diameter')
-            plant_data.sd_firmness = data.get('sd_firmness')
-            plant_data.sd_diameter = data.get('sd_diameter')
-            plant_data.box = data.get('box')
-
-            db.session.commit()
-
-            return jsonify({'status': 'success', 'message': 'Plant data updated successfully!'}), 200
-        else:
-            new_plant_data = PlantData(
-                barcode=barcode,
-                genotype=data.get('genotype'),
-                stage=data.get('stage'),
-                site=data.get('site'),
-                block=data.get('block'),
-                project=data.get('project'),
-                post_harvest=data.get('post_harvest'),
-                bush_plant_number=data.get('bush_plant_number'),
-                notes=data.get('notes'),
-                mass=data.get('mass'),
-                x_berry_mass=data.get('x_berry_mass'),
-                number_of_berries=data.get('number_of_berries'),
-                ph=data.get('ph'),
-                brix=data.get('brix'),
-                juicemass=data.get('juicemass'),
-                tta=data.get('tta'),
-                mladded=data.get('mladded'),
-                avg_firmness=data.get('avg_firmness'),
-                avg_diameter=data.get('avg_diameter'),
-                sd_firmness=data.get('sd_firmness'),
-                sd_diameter=data.get('sd_diameter'),
-                box=data.get('box'),
-            )
-
-            db.session.add(new_plant_data)
-            db.session.commit()
-
-            return jsonify({'status': 'success', 'message': 'Plant data added successfully!'}), 201
-
-    except Exception as e:
-        db.session.rollback()
-        return jsonify({'status': 'error', 'message': str(e)}), 400
-    
 @app.route('/check_barcode', methods=['POST'])
 def check_barcode():
     barcode = request.json.get('barcode')
@@ -326,6 +252,43 @@ def check_barcode():
             return jsonify({'status': 'not_found'}), 404
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 500
+
+@app.route('/add_plant_data', methods=['POST'])
+def add_plant_data():
+    data = request.json
+    barcode = data.get('barcode')
+
+    if not barcode:
+        return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
+
+    try:
+        # Check if a plant with the given barcode already exists
+        plant_data = PlantData.query.filter_by(barcode=barcode).first()
+
+        if plant_data:
+            # List of fields that can be updated
+            fields = [
+                'genotype', 'stage', 'site', 'block', 'project', 'post_harvest',
+                'bush_plant_number', 'notes', 'mass', 'x_berry_mass', 'number_of_berries',
+                'ph', 'brix', 'juicemass', 'tta', 'mladded', 'avg_firmness',
+                'avg_diameter', 'sd_firmness', 'sd_diameter', 'box'
+            ]
+
+            # Update only the fields provided in the request data
+            for field in fields:
+                if field in data and data[field] is not None:
+                    setattr(plant_data, field, data[field])
+
+            db.session.commit()
+
+            return jsonify({'status': 'success', 'message': 'Plant data updated successfully!'}), 200
+        else:
+            # Handle the case where the plant does not exist
+            return jsonify({'status': 'error', 'message': 'Plant not found.'}), 404
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'status': 'error', 'message': str(e)}), 400
     
 @app.route('/spell_check', methods=['POST'])
 def spell_check():
