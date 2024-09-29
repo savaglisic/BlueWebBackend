@@ -337,6 +337,85 @@ def add_plant_data():
         db.session.rollback()
         return jsonify({'status': 'error', 'message': str(e)}), 400
     
+@app.route('/get_plant_data', methods=['GET'])
+def get_plant_data():
+    # Retrieve query parameters for pagination
+    page = request.args.get('page', 1, type=int)  # Default page number is 1
+    per_page = request.args.get('per_page', 10, type=int)  # Default items per page is 10
+
+    # Optional search parameters
+    genotype = request.args.get('genotype')
+    barcode = request.args.get('barcode')
+    stage = request.args.get('stage')
+    site = request.args.get('site')
+    block = request.args.get('block')
+    project = request.args.get('project')
+    post_harvest = request.args.get('post_harvest')
+
+    # Base query
+    query = PlantData.query
+
+    # Apply filters based on search parameters
+    if genotype:
+        query = query.filter(PlantData.genotype.ilike(f"%{genotype}%"))
+    if barcode:
+        query = query.filter(PlantData.genotype.ilike(f"%{barcode}%"))
+    if stage:
+        query = query.filter(PlantData.stage.ilike(f"%{stage}%"))
+    if site:
+        query = query.filter(PlantData.site.ilike(f"%{site}%"))
+    if block:
+        query = query.filter(PlantData.block.ilike(f"%{block}%"))
+    if project:
+        query = query.filter(PlantData.project.ilike(f"%{project}%"))
+    if post_harvest:
+        query = query.filter(PlantData.post_harvest.ilike(f"%{post_harvest}%"))
+
+    # Apply pagination
+    paginated_result = query.paginate(page=page, per_page=per_page, error_out=False)
+
+    # Serialize the results
+    def serialize_plant_data(plant):
+        return {
+            'id': plant.id,
+            'barcode': plant.barcode,
+            'genotype': plant.genotype,
+            'stage': plant.stage,
+            'site': plant.site,
+            'block': plant.block,
+            'project': plant.project,
+            'post_harvest': plant.post_harvest,
+            'bush_plant_number': plant.bush_plant_number,
+            'notes': plant.notes,
+            'mass': plant.mass,
+            'x_berry_mass': plant.x_berry_mass,
+            'number_of_berries': plant.number_of_berries,
+            'ph': plant.ph,
+            'brix': plant.brix,
+            'juicemass': plant.juicemass,
+            'tta': plant.tta,
+            'mladded': plant.mladded,
+            'avg_firmness': plant.avg_firmness,
+            'avg_diameter': plant.avg_diameter,
+            'sd_firmness': plant.sd_firmness,
+            'sd_diameter': plant.sd_diameter,
+            'box': plant.box
+        }
+
+    # Collect the data and metadata for pagination
+    plant_data_list = [serialize_plant_data(plant) for plant in paginated_result.items]
+    response = {
+        'total': paginated_result.total,
+        'pages': paginated_result.pages,
+        'current_page': paginated_result.page,
+        'per_page': paginated_result.per_page,
+        'has_next': paginated_result.has_next,
+        'has_prev': paginated_result.has_prev,
+        'results': plant_data_list
+    }
+
+    return jsonify(response), 200
+    
 @app.route('/spell_check', methods=['POST'])
 def spell_check():
     data = request.get_json()
