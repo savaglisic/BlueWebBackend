@@ -43,7 +43,28 @@ def update_user():
     new_user_name = data.get('user_name')
     new_password = data.get('password')
 
-    # Check if the email is in the whitelist
+    # Check if the email is in the whitelistclass OptionConfig(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    option_type = db.Column(db.String(120), unique=False, nullable=False)
+    option_text = db.Column(db.String(120), unique=False, nullable=False)
+
+    @staticmethod
+    def initialize_defaults():
+        default_values = [
+            {"option_type": "stage", "option_text": "N/A"},
+            {"option_type": "site", "option_text": "N/A"},
+            {"option_type": "block", "option_text": "N/A"},
+            {"option_type": "project", "option_text": "N/A"},
+            {"option_type": "post_harvest", "option_text": "N/A"},
+        ]
+        
+        # Check if these default values are already present to prevent duplication
+        for value in default_values:
+            if not OptionConfig.query.filter_by(option_type=value["option_type"], option_text=value["option_text"]).first():
+                new_entry = OptionConfig(option_type=value["option_type"], option_text=value["option_text"])
+                db.session.add(new_entry)
+        
+        db.session.commit()
     whitelisted_email = EmailWhitelist.query.filter_by(email=email).first()
     if not whitelisted_email:
         return jsonify({'status': 'email_not_whitelisted'}), 400
@@ -280,11 +301,37 @@ def add_plant_data():
                     setattr(plant_data, field, data[field])
 
             db.session.commit()
-
             return jsonify({'status': 'success', 'message': 'Plant data updated successfully!'}), 200
         else:
-            # Handle the case where the plant does not exist
-            return jsonify({'status': 'error', 'message': 'Plant not found.'}), 404
+            # Create a new plant record
+            new_plant_data = PlantData(
+                barcode=barcode,
+                genotype=data.get('genotype'),
+                stage=data.get('stage'),
+                site=data.get('site'),
+                block=data.get('block'),
+                project=data.get('project'),
+                post_harvest=data.get('post_harvest'),
+                bush_plant_number=data.get('bush_plant_number'),
+                notes=data.get('notes'),
+                mass=data.get('mass'),
+                x_berry_mass=data.get('x_berry_mass'),
+                number_of_berries=data.get('number_of_berries'),
+                ph=data.get('ph'),
+                brix=data.get('brix'),
+                juicemass=data.get('juicemass'),
+                tta=data.get('tta'),
+                mladded=data.get('mladded'),
+                avg_firmness=data.get('avg_firmness'),
+                avg_diameter=data.get('avg_diameter'),
+                sd_firmness=data.get('sd_firmness'),
+                sd_diameter=data.get('sd_diameter'),
+                box=data.get('box')
+            )
+
+            db.session.add(new_plant_data)
+            db.session.commit()
+            return jsonify({'status': 'success', 'message': 'New plant data created successfully!'}), 201
 
     except Exception as e:
         db.session.rollback()
@@ -322,6 +369,7 @@ if __name__ == '__main__':
     # Use the app context to avoid "Working outside of application context" errors
     with app.app_context():
         db.create_all()  # Create the database tables if they don't exist
+        OptionConfig.initialize_defaults()
     app.run(debug=True, port=5000)
 
 

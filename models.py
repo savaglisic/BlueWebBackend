@@ -21,6 +21,23 @@ class OptionConfig(db.Model):
     option_type = db.Column(db.String(120), unique=False, nullable=False)
     option_text = db.Column(db.String(120), unique=False, nullable=False)
 
+    @staticmethod
+    def initialize_defaults():
+        default_values = [
+            {"option_type": "stage", "option_text": "N/A"},
+            {"option_type": "site", "option_text": "N/A"},
+            {"option_type": "block", "option_text": "N/A"},
+            {"option_type": "project", "option_text": "N/A"},
+            {"option_type": "post_harvest", "option_text": "N/A"},
+        ]
+        
+        for value in default_values:
+            if not OptionConfig.query.filter_by(option_type=value["option_type"], option_text=value["option_text"]).first():
+                new_entry = OptionConfig(option_type=value["option_type"], option_text=value["option_text"])
+                db.session.add(new_entry)
+        
+        db.session.commit()
+
 # Define the Rank model
 class Rank(db.Model):
     __tablename__ = 'ranks'
