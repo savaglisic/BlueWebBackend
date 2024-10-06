@@ -436,6 +436,59 @@ def spell_check():
         return jsonify({"message": "Partial match found", "genotype": closest_matches[0], "note": "Partial match"}), 200
     else:
         return jsonify({"message": "No match found"}), 404
+    
+@app.route('/fruit_firm', methods=['POST'])
+def fruit_firm():
+    data = request.json
+    barcode = data.get('barcode')
+
+    if not barcode:
+        return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
+
+    # Extract the firmness and diameter fields from the request data
+    avg_firmness = data.get('avg_firmness')
+    avg_diameter = data.get('avg_diameter')
+    sd_firmness = data.get('sd_firmness')
+    sd_diameter = data.get('sd_diameter')
+
+    # Check that at least one of the required fields is provided
+    if avg_firmness is None and avg_diameter is None and sd_firmness is None and sd_diameter is None:
+        return jsonify({'status': 'error', 'message': 'At least one of avg_firmness, avg_diameter, sd_firmness, or sd_diameter is required.'}), 400
+
+    try:
+        # Check if a plant with the given barcode already exists
+        plant_data = PlantData.query.filter_by(barcode=barcode).first()
+
+        if plant_data:
+            # Update only the firmness and diameter fields provided in the request data
+            if avg_firmness is not None:
+                plant_data.avg_firmness = avg_firmness
+            if avg_diameter is not None:
+                plant_data.avg_diameter = avg_diameter
+            if sd_firmness is not None:
+                plant_data.sd_firmness = sd_firmness
+            if sd_diameter is not None:
+                plant_data.sd_diameter = sd_diameter
+
+            db.session.commit()
+            return jsonify({'status': 'success', 'message': 'Plant firmness and diameter data updated successfully!'}), 200
+        else:
+            # Create a new plant record with only the barcode and firmness/diameter fields
+            new_plant_data = PlantData(
+                barcode=barcode,
+                avg_firmness=avg_firmness,
+                avg_diameter=avg_diameter,
+                sd_firmness=sd_firmness,
+                sd_diameter=sd_diameter
+            )
+
+            db.session.add(new_plant_data)
+            db.session.commit()
+            return jsonify({'status': 'success', 'message': 'New plant data created successfully with firmness and diameter information!'}), 201
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'status': 'error', 'message': str(e)}), 400
 
 @app.after_request
 def after_request(response):
