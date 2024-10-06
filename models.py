@@ -160,3 +160,13 @@ class Genotype(db.Model):
 
     def __repr__(self):
         return f'<Genotype {self.genotype}>'
+    
+class APIKey(db.Model):
+    __tablename__ = 'api_keys'
+    id = db.Column(db.Integer, primary_key=True)
+    key = db.Column(db.String(64), unique=True, nullable=False)
+    description = db.Column(db.String(255), nullable=True)  
+
+    def __init__(self, key, description=None):
+        self.key = key
+        self.description = description

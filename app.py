@@ -1,8 +1,10 @@
+import datetime
 from difflib import get_close_matches
 from flask import Flask, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-from models import Genotype, OptionConfig, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
+from models import APIKey, Genotype, OptionConfig, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
+from functools import wraps
 
 app = Flask(__name__)
 CORS(app)
@@ -437,7 +439,26 @@ def spell_check():
     else:
         return jsonify({"message": "No match found"}), 404
     
+def validate_api_key(fn):
+    @wraps(fn)
+    def decorated(*args, **kwargs):
+        api_key = request.headers.get('X-API-KEY')
+        if not api_key:
+            return jsonify({'status': 'error', 'message': 'API key is missing.'}), 403
+
+        # Check if the API key is valid
+        key_record = APIKey.query.filter_by(key=api_key).first()
+        if not key_record:
+            return jsonify({'status': 'error', 'message': 'Invalid API key.'}), 403
+
+        db.session.commit()
+
+        return fn(*args, **kwargs)
+
+    return decorated
+    
 @app.route('/fruit_firm', methods=['POST'])
+@validate_api_key
 def fruit_firm():
     data = request.json
     barcode = data.get('barcode')
