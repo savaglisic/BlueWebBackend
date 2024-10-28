@@ -44,29 +44,6 @@ def update_user():
     email = data.get('email').lower()  # Normalize email to lowercase
     new_user_name = data.get('user_name')
     new_password = data.get('password')
-
-    # Check if the email is in the whitelistclass OptionConfig(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    option_type = db.Column(db.String(120), unique=False, nullable=False)
-    option_text = db.Column(db.String(120), unique=False, nullable=False)
-
-    @staticmethod
-    def initialize_defaults():
-        default_values = [
-            {"option_type": "stage", "option_text": "N/A"},
-            {"option_type": "site", "option_text": "N/A"},
-            {"option_type": "block", "option_text": "N/A"},
-            {"option_type": "project", "option_text": "N/A"},
-            {"option_type": "post_harvest", "option_text": "N/A"},
-        ]
-        
-        # Check if these default values are already present to prevent duplication
-        for value in default_values:
-            if not OptionConfig.query.filter_by(option_type=value["option_type"], option_text=value["option_text"]).first():
-                new_entry = OptionConfig(option_type=value["option_type"], option_text=value["option_text"])
-                db.session.add(new_entry)
-        
-        db.session.commit()
     whitelisted_email = EmailWhitelist.query.filter_by(email=email).first()
     if not whitelisted_email:
         return jsonify({'status': 'email_not_whitelisted'}), 400
