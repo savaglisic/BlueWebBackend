@@ -71,6 +71,15 @@ def update_user():
         db.session.add(new_user)
         db.session.commit()
         return jsonify({'status': 'user_created_successfully'}), 201
+    
+@app.route('/get_user_group', methods=['GET'])
+def get_user_group():
+    email = request.args.get('email').lower()  # Retrieve email from query parameters and normalize it
+    user = User.query.filter_by(email=email).first()
+    if user:
+        return jsonify({'status': 'success', 'user_group': user.user_group}), 200
+    else:
+        return jsonify({'status': 'user_not_found'}), 404
   
 @app.route('/search_genotype', methods=['GET'])
 def search_genotype():
