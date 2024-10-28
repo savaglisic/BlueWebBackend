@@ -9,7 +9,8 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(255), nullable=False)  # Increased size to 255
+    password = db.Column(db.String(255), nullable=False)  
+    user_group = db.Column(db.String(80), nullable=False)
 
 # Define the EmailWhitelist model
 class EmailWhitelist(db.Model):
