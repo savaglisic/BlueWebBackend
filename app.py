@@ -88,7 +88,8 @@ def update_user():
         new_user = User(
             user_name=new_user_name,
             email=email,
-            password=generate_password_hash(new_password)
+            password=generate_password_hash(new_password),
+            user_group='ops'
         )
         db.session.add(new_user)
         db.session.commit()
