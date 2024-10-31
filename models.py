@@ -30,6 +30,9 @@ class OptionConfig(db.Model):
             {"option_type": "block", "option_text": "N/A"},
             {"option_type": "project", "option_text": "N/A"},
             {"option_type": "post_harvest", "option_text": "N/A"},
+            {"option_type": "ph_range", "option_text": "1.1-12.2"},
+            {"option_type": "brix_range", "option_text": "1.1-12.2"},
+            {"option_type": "tta_range", "option_text": "1.1-12.2"},
         ]
         
         for value in default_values:
