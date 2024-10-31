@@ -185,6 +185,24 @@ def delete_email_from_whitelist(email):
 
     return jsonify({'status': 'success', 'message': 'Email removed from whitelist'}), 200
 
+@app.route('/option_config/<int:id>', methods=['PUT'])
+def update_option_config(id):
+    data = request.json
+    option_text = data.get('option_text')
+
+    if not option_text:
+        return jsonify({'status': 'error', 'message': 'option_text is required'}), 400
+
+    option = OptionConfig.query.filter_by(id=id).first()
+
+    if not option:
+        return jsonify({'status': 'error', 'message': 'OptionConfig not found'}), 404
+
+    option.option_text = option_text
+    db.session.commit()
+
+    return jsonify({'status': 'success', 'message': 'OptionConfig updated successfully'}), 200
+
 @app.route('/option_config/<int:id>', methods=['DELETE'])
 def delete_option_config(id):
     option = OptionConfig.query.filter_by(id=id).first()
