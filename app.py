@@ -5,12 +5,17 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
 from models import APIKey, Genotype, OptionConfig, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
 from functools import wraps
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-# SQLAlchemy Configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://devuser:Sava2290!@localhost:3306/blueweb'
+db_user = os.environ.get('DB_USER', 'devuser')
+db_password = os.environ.get('DB_PASS', 'Sava2290!')
+db_host = os.environ.get('DB_HOST', 'localhost')
+db_name = os.environ.get('DB_NAME', 'blueweb')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+mysqlconnector://{db_user}:{db_password}@{db_host}:3306/{db_name}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the database connection
@@ -528,6 +533,6 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Create the database tables if they don't exist
         OptionConfig.initialize_defaults()
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)
 
 

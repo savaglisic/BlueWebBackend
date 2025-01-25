@@ -12,10 +12,16 @@ class User(db.Model):
     password = db.Column(db.String(255), nullable=False)  
     user_group = db.Column(db.String(80), nullable=False)
 
-# Define the EmailWhitelist model
 class EmailWhitelist(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
+
+    @staticmethod
+    def initialize_defaults():
+        default_email = "savaglisic@ufl.edu"
+        if not EmailWhitelist.query.filter_by(email=default_email).first():
+            db.session.add(EmailWhitelist(email=default_email))
+            db.session.commit()
 
 class OptionConfig(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -1,0 +1,40 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: blueweb
+      MYSQL_USER: devuser
+      MYSQL_PASSWORD: "Sava2290!"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "devuser", "-pSava2290!"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+
+  backend:
+    build: .
+    container_name: BLUEBACKEND
+    environment:
+      DB_HOST: mysql
+      DB_NAME: blueweb
+      DB_USER: devuser
+      DB_PASS: "Sava2290!"
+    ports:
+      - "5001:5001"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+
+volumes:
+  mysql_data:
+
+
+
