@@ -374,6 +374,9 @@ def delete_plant_data():
         return jsonify({'status': 'error', 'message': str(e)}), 400
 
 
+from flask import request, jsonify
+from sqlalchemy import or_
+
 @app.route('/get_plant_data', methods=['GET'])
 def get_plant_data():
     page = request.args.get('page', 1, type=int)
@@ -397,30 +400,32 @@ def get_plant_data():
         value = f.get('value', '').strip()
 
         if not field or not value:
-            # skip invalid filter
+            # Skip invalid filters
             continue
 
         if not hasattr(PlantData, field):
-            # skip unknown field
+            # Skip unknown fields
             continue
 
         col = getattr(PlantData, field)
 
         if operator == 'includes':
-            # condition e.g. column ILIKE '%...%'
             includes_list.append(col.ilike(f"%{value}%"))
         elif operator == 'excludes':
-            # condition e.g. column ILIKE '%...%' (we will negate it later)
             excludes_list.append(col.ilike(f"%{value}%"))
-        # you could handle other operators here if desired
 
-    # If we have any includes, combine them with OR
+    # Apply include filters (OR condition)
     if includes_list:
         query = query.filter(or_(*includes_list))
-    # If we have excludes, combine them with OR, then negate
+    
+    # Apply exclude filters (negated OR condition)
     if excludes_list:
         query = query.filter(~or_(*excludes_list))
 
+    # 🔥 Apply default sorting by timestamp (newest first)
+    query = query.order_by(PlantData.timestamp.desc())
+
+    # Paginate results
     paginated_result = query.paginate(page=page, per_page=per_page, error_out=False)
 
     def serialize_plant_data(plant):
@@ -449,10 +454,11 @@ def get_plant_data():
             'sd_diameter': plant.sd_diameter,
             'box': plant.box,
             'week': plant.week,
-            'timestamp': plant.timestamp,
+            'timestamp': plant.timestamp,  # Sorting is applied based on this field
         }
 
     plant_data_list = [serialize_plant_data(p) for p in paginated_result.items]
+    
     response = {
         'total': paginated_result.total,
         'pages': paginated_result.pages,
@@ -464,7 +470,6 @@ def get_plant_data():
     }
 
     return jsonify(response), 200
-
 
     
 @app.route('/spell_check', methods=['POST'])
