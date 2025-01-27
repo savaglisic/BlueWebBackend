@@ -6,6 +6,7 @@ from flask_cors import CORS
 from models import APIKey, Genotype, OptionConfig, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
 from functools import wraps
 import os
+from sqlalchemy import or_
 
 app = Flask(__name__)
 CORS(app)
@@ -372,13 +373,12 @@ def delete_plant_data():
         db.session.rollback()
         return jsonify({'status': 'error', 'message': str(e)}), 400
 
-    
+
 @app.route('/get_plant_data', methods=['GET'])
 def get_plant_data():
     page = request.args.get('page', 1, type=int)
     per_page = request.args.get('per_page', 10, type=int)
-    
-    # The query builder filters come in as JSON string in request.args.get('filters')
+
     import json
     filters_str = request.args.get('filters', '[]')
     try:
@@ -387,34 +387,40 @@ def get_plant_data():
         filters = []
 
     query = PlantData.query
-    
-    # For each filter, apply includes or excludes
-    # filter is { "field": "genotype", "operator": "includes", "value": "Sweet" }
+
+    includes_list = []
+    excludes_list = []
+
     for f in filters:
         field = f.get('field', '').strip()
         operator = f.get('operator', 'includes')
         value = f.get('value', '').strip()
-        
+
         if not field or not value:
-            # Skip blank filter
+            # skip invalid filter
             continue
 
-        # Make sure the field exists on PlantData (safely). In production, you might want to verify
-        # the field is whitelisted to avoid SQL injection
         if not hasattr(PlantData, field):
+            # skip unknown field
             continue
 
         col = getattr(PlantData, field)
-        
+
         if operator == 'includes':
-            # e.g. genotype ILIKE '%sweet%'
-            query = query.filter(col.ilike(f"%{value}%"))
+            # condition e.g. column ILIKE '%...%'
+            includes_list.append(col.ilike(f"%{value}%"))
         elif operator == 'excludes':
-            # e.g. genotype NOT ILIKE '%sweet%'
-            query = query.filter(~col.ilike(f"%{value}%"))
-        # You could extend logic for equals, startsWith, etc.
-    
-    # Now do pagination
+            # condition e.g. column ILIKE '%...%' (we will negate it later)
+            excludes_list.append(col.ilike(f"%{value}%"))
+        # you could handle other operators here if desired
+
+    # If we have any includes, combine them with OR
+    if includes_list:
+        query = query.filter(or_(*includes_list))
+    # If we have excludes, combine them with OR, then negate
+    if excludes_list:
+        query = query.filter(~or_(*excludes_list))
+
     paginated_result = query.paginate(page=page, per_page=per_page, error_out=False)
 
     def serialize_plant_data(plant):
@@ -443,7 +449,7 @@ def get_plant_data():
             'sd_diameter': plant.sd_diameter,
             'box': plant.box,
             'week': plant.week,
-            'timestamp': plant.timestamp
+            'timestamp': plant.timestamp,
         }
 
     plant_data_list = [serialize_plant_data(p) for p in paginated_result.items]
@@ -454,10 +460,11 @@ def get_plant_data():
         'per_page': paginated_result.per_page,
         'has_next': paginated_result.has_next,
         'has_prev': paginated_result.has_prev,
-        'results': plant_data_list
+        'results': plant_data_list,
     }
 
     return jsonify(response), 200
+
 
     
 @app.route('/spell_check', methods=['POST'])
