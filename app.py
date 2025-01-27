@@ -349,6 +349,30 @@ def add_plant_data():
         db.session.rollback()
         return jsonify({'status': 'error', 'message': str(e)}), 400
     
+@app.route('/delete_plant_data', methods=['DELETE'])
+def delete_plant_data():
+    data = request.json
+    barcode = data.get('barcode')
+
+    if not barcode:
+        return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
+
+    try:
+        # Find the plant record by barcode
+        plant_data = PlantData.query.filter_by(barcode=barcode).first()
+
+        if plant_data:
+            db.session.delete(plant_data)
+            db.session.commit()
+            return jsonify({'status': 'success', 'message': 'Plant data deleted successfully!'}), 200
+        else:
+            return jsonify({'status': 'error', 'message': 'Plant data not found.'}), 404
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'status': 'error', 'message': str(e)}), 400
+
+    
 @app.route('/get_plant_data', methods=['GET'])
 def get_plant_data():
     # Retrieve query parameters for pagination
