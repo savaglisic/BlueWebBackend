@@ -16,7 +16,7 @@ db_password = os.environ.get('DB_PASS', 'Sava2290!')
 db_host = os.environ.get('DB_HOST', 'localhost')
 db_name = os.environ.get('DB_NAME', 'blueweb')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+mysqlconnector://devuser:Sava2290!@localhost:3306/blueweb"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+mysqlconnector://devuser:Sava2290!@mysql:3306/blueweb"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the database connection
