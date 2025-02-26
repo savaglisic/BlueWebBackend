@@ -80,7 +80,8 @@ def parse_csv(file_path):
             content = file.readlines()
 
         # Extract the ticket number (Barcode)
-        ticket_number = next((line.split(",")[1] for line in content if line.startswith("Ticket #")), None)
+        # Extract the ticket number (Barcode) and remove leading/trailing spaces
+        ticket_number = next((line.split(",")[1].strip() for line in content if line.startswith("Ticket #")), None)
         if not ticket_number:
             raise ValueError("No ticket number (barcode) found in the file!")
 
