@@ -3,13 +3,15 @@ import time
 import sqlite3
 import pandas as pd
 import requests
+import traceback
 
 # Constants
 RUNDATA_DIR = "/Users/savaglisic/Desktop/Code/BlueBackend/rundata"
 DB_FILE = "processed_files.db"
+LOG_FILE = "error.log"
 API_ENDPOINT = "http://localhost:5001/fruit_firm"
 API_KEY = "24742405-8397-11ef-9f80-12a7bbaed785"
-MODIFICATION_THRESHOLD = 120  # 2 minutes in seconds
+MODIFICATION_THRESHOLD = 120  # 2 minutes
 
 # Ensure the database exists and create tracking table
 def initialize_database():
@@ -63,65 +65,80 @@ def filter_recent_files(files):
     current_time = time.time()
     return [file for file in files if (current_time - os.path.getmtime(file)) > MODIFICATION_THRESHOLD]
 
-# Extract data from a CSV file
+# Log errors safely
+def log_error(file_path, error_message):
+    with open(LOG_FILE, "a") as log_file:
+        log_file.write(f"ERROR in file {file_path}:\n{error_message}\n\n")
+    print(f"  -> Error processing {file_path}. Logged in {LOG_FILE}")
+
+# Extract data from a CSV file safely
 def parse_csv(file_path):
     print(f"\nProcessing file: {file_path}")
     
-    with open(file_path, 'r') as file:
-        content = file.readlines()
+    try:
+        with open(file_path, 'r') as file:
+            content = file.readlines()
 
-    # Extract the ticket number (Barcode)
-    ticket_number = next((line.split(",")[1] for line in content if line.startswith("Ticket #")), None)
-    if not ticket_number:
-        print("Error: No ticket number (barcode) found in the file!")
-        return None
+        # Extract the ticket number (Barcode)
+        ticket_number = next((line.split(",")[1] for line in content if line.startswith("Ticket #")), None)
+        if not ticket_number:
+            raise ValueError("No ticket number (barcode) found in the file!")
 
-    # Extract only the numerical data rows (ignoring metadata)
-    data_lines = [line.strip().split(',') for line in content if line[0].isdigit()]
-    if not data_lines:
-        print("Error: No valid berry data found in the file!")
-        return None
+        # Extract only the numerical data rows (ignoring metadata)
+        data_lines = [line.strip().split(',') for line in content if line[0].isdigit()]
+        if not data_lines:
+            raise ValueError("No valid berry data found in the file!")
 
-    # Convert to DataFrame
-    df = pd.DataFrame(data_lines, columns=['BerryNumber', 'Diameter', 'Ignore', 'Firmness'])
-    df = df.astype({'Diameter': float, 'Firmness': float})
+        # Convert to DataFrame
+        df = pd.DataFrame(data_lines, columns=['BerryNumber', 'Diameter', 'Ignore', 'Firmness'])
+        df = df.astype({'Diameter': float, 'Firmness': float})
 
-    # Compute statistics
-    avg_diameter = df['Diameter'].mean()
-    avg_firmness = df['Firmness'].mean()
-    std_diameter = df['Diameter'].std()
-    std_firmness = df['Firmness'].std()
+        # Compute statistics
+        avg_diameter = df['Diameter'].mean()
+        avg_firmness = df['Firmness'].mean()
+        std_diameter = df['Diameter'].std()
+        std_firmness = df['Firmness'].std()
 
-    print(f"  -> Average Diameter: {avg_diameter:.3f}")
-    print(f"  -> Standard Deviation of Diameter: {std_diameter:.3f}")
-    print(f"  -> Average Firmness: {avg_firmness:.3f}")
-    print(f"  -> Standard Deviation of Firmness: {std_firmness:.3f}")
+        print(f"  -> Average Diameter: {avg_diameter:.3f}")
+        print(f"  -> Standard Deviation of Diameter: {std_diameter:.3f}")
+        print(f"  -> Average Firmness: {avg_firmness:.3f}")
+        print(f"  -> Standard Deviation of Firmness: {std_firmness:.3f}")
 
-    return {
-        "barcode": ticket_number,
-        "avg_firmness": avg_firmness,
-        "avg_diameter": avg_diameter,
-        "sd_firmness": std_firmness,
-        "sd_diameter": std_diameter
-    }
+        return {
+            "barcode": ticket_number,
+            "avg_firmness": avg_firmness,
+            "avg_diameter": avg_diameter,
+            "sd_firmness": std_firmness,
+            "sd_diameter": std_diameter
+        }
 
-# Send data to remote API
-def send_to_api(data):
-    print(f"Sending data to API for barcode {data['barcode']}...")
-    
-    headers = {
-        "Content-Type": "application/json",
-        "x-api-key": API_KEY
-    }
+    except Exception as e:
+        log_error(file_path, traceback.format_exc())
+        return None  # Continue with the next file
 
-    response = requests.post(API_ENDPOINT, json=data, headers=headers)
+# Send data to remote API safely
+def send_to_api(data, file_path):
+    try:
+        print(f"Sending data to API for barcode {data['barcode']}...")
 
-    if response.status_code == 200:
-        print("  -> API Response: Success")
-    else:
-        print(f"  -> API Error: {response.status_code} - {response.text}")
+        headers = {
+            "Content-Type": "application/json",
+            "x-api-key": API_KEY
+        }
 
-# Main function
+        response = requests.post(API_ENDPOINT, json=data, headers=headers)
+        
+        if response.status_code in [200, 201]:  # Handle success responses correctly
+            print(f"  -> API Response: Success ({response.status_code}) - {response.json()['message']}")
+        else:
+            print(f"  -> API Error: {response.status_code}")
+            print(f"  -> Response Body: {response.text}")
+            raise Exception(f"API Error: {response.status_code} - {response.text}")
+
+    except Exception as e:
+        log_error(file_path, traceback.format_exc())
+
+# Main function with full error handling
 def main():
     print("\n--- Starting Rundata Processing ---")
 
@@ -143,12 +160,15 @@ def main():
 
     processed_list = []
     for file in files_to_process:
-        # Step 4: Parse the CSV and extract data
-        data = parse_csv(file)
-        if data:
-            # Step 5: Send data to API
-            send_to_api(data)
-            processed_list.append(file)
+        try:
+            # Step 4: Parse the CSV and extract data
+            data = parse_csv(file)
+            if data:
+                # Step 5: Send data to API
+                send_to_api(data, file)
+                processed_list.append(file)  # Only mark successful files
+        except Exception as e:
+            log_error(file, traceback.format_exc())
 
     # Step 6: Mark processed files in batch
     mark_files_as_processed(processed_list)
@@ -157,4 +177,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

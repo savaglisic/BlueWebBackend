@@ -515,27 +515,30 @@ def validate_api_key(fn):
 @validate_api_key
 def fruit_firm():
     data = request.json
-    barcode = data.get('barcode')
 
+    # Ensure barcode exists and clean the input
+    barcode = data.get('barcode')
     if not barcode:
         return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
 
-    # Extract the firmness and diameter fields from the request data
+    barcode = barcode.strip()  # Trim spaces
+
+    # Normalize other received fields (trim spaces if string, keep None values)
     avg_firmness = data.get('avg_firmness')
     avg_diameter = data.get('avg_diameter')
     sd_firmness = data.get('sd_firmness')
     sd_diameter = data.get('sd_diameter')
 
-    # Check that at least one of the required fields is provided
-    if avg_firmness is None and avg_diameter is None and sd_firmness is None and sd_diameter is None:
+    # Ensure at least one relevant field is provided
+    if all(value is None for value in [avg_firmness, avg_diameter, sd_firmness, sd_diameter]):
         return jsonify({'status': 'error', 'message': 'At least one of avg_firmness, avg_diameter, sd_firmness, or sd_diameter is required.'}), 400
 
     try:
-        # Check if a plant with the given barcode already exists
-        plant_data = PlantData.query.filter_by(barcode=barcode).first()
+        # Check if barcode exists and update instead of inserting a duplicate
+        plant_data = PlantData.query.filter(PlantData.barcode == barcode).first()
 
         if plant_data:
-            # Update only the firmness and diameter fields provided in the request data
+            # Update only fields that were provided (ignore None values)
             if avg_firmness is not None:
                 plant_data.avg_firmness = avg_firmness
             if avg_diameter is not None:
@@ -548,7 +551,7 @@ def fruit_firm():
             db.session.commit()
             return jsonify({'status': 'success', 'message': 'Plant firmness and diameter data updated successfully!'}), 200
         else:
-            # Create a new plant record with only the barcode and firmness/diameter fields
+            # Insert a new plant data record safely
             new_plant_data = PlantData(
                 barcode=barcode,
                 avg_firmness=avg_firmness,
@@ -559,7 +562,7 @@ def fruit_firm():
 
             db.session.add(new_plant_data)
             db.session.commit()
-            return jsonify({'status': 'success', 'message': 'New plant data created successfully with firmness and diameter information!'}), 201
+            return jsonify({'status': 'success', 'message': 'New plant data created successfully!'}), 201
 
     except Exception as e:
         db.session.rollback()
