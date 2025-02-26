@@ -6,7 +6,6 @@ import requests
 
 # Constants
 RUNDATA_DIR = "/Users/savaglisic/Desktop/Code/BlueBackend/rundata"
-
 DB_FILE = "processed_files.db"
 API_ENDPOINT = "http://localhost:5001/fruit_firm"
 API_KEY = "24742405-8397-11ef-9f80-12a7bbaed785"
@@ -25,20 +24,22 @@ def initialize_database():
     conn.commit()
     conn.close()
 
-# Check if a file has already been processed
-def is_file_processed(file_path):
+# Fetch all processed files in one query to avoid multiple DB calls
+def get_processed_files():
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
-    cursor.execute("SELECT file_path FROM processed_files WHERE file_path = ?", (file_path,))
-    result = cursor.fetchone()
+    cursor.execute("SELECT file_path FROM processed_files")
+    processed_files = set(row[0] for row in cursor.fetchall())  # Store as set for O(1) lookups
     conn.close()
-    return result is not None
+    return processed_files
 
-# Mark a file as processed
-def mark_file_as_processed(file_path):
+# Mark multiple files as processed in a single batch
+def mark_files_as_processed(files):
+    if not files:
+        return
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO processed_files (file_path) VALUES (?)", (file_path,))
+    cursor.executemany("INSERT INTO processed_files (file_path) VALUES (?)", [(f,) for f in files])
     conn.commit()
     conn.close()
 
@@ -46,18 +47,16 @@ def mark_file_as_processed(file_path):
 def find_csv_files():
     csv_files = []
     for root, dirs, files in os.walk(RUNDATA_DIR):
-        # Ignore "old" directories
-        if "old" in root.split(os.sep):
-            continue
+        # Modify dirs in-place to avoid traversing "old"
+        dirs[:] = [d for d in dirs if d.lower() != "old"]
 
         for file in files:
             if file.endswith(".csv"):
                 full_path = os.path.join(root, file)
                 csv_files.append(full_path)
 
-    print("Detected CSV files:", csv_files)  # Debugging output
+    print(f"Found {len(csv_files)} CSV files.")
     return csv_files
-
 
 # Filter out files modified in the last 2 minutes
 def filter_recent_files(files):
@@ -72,27 +71,19 @@ def parse_csv(file_path):
         content = file.readlines()
 
     # Extract the ticket number (Barcode)
-    ticket_number = None
-    for line in content:
-        if line.startswith("Ticket #"):
-            ticket_number = line.strip().split(",")[1]
-            break
-
+    ticket_number = next((line.split(",")[1] for line in content if line.startswith("Ticket #")), None)
     if not ticket_number:
         print("Error: No ticket number (barcode) found in the file!")
         return None
 
     # Extract only the numerical data rows (ignoring metadata)
     data_lines = [line.strip().split(',') for line in content if line[0].isdigit()]
-    
     if not data_lines:
         print("Error: No valid berry data found in the file!")
         return None
 
     # Convert to DataFrame
     df = pd.DataFrame(data_lines, columns=['BerryNumber', 'Diameter', 'Ignore', 'Firmness'])
-
-    # Convert relevant columns to numeric types
     df = df.astype({'Diameter': float, 'Firmness': float})
 
     # Compute statistics
@@ -138,30 +129,32 @@ def main():
 
     # Step 1: Find all CSV files
     all_csv_files = find_csv_files()
-    print(f"Found {len(all_csv_files)} CSV files.")
 
     # Step 2: Filter out recently modified files
     eligible_files = filter_recent_files(all_csv_files)
     print(f"{len(eligible_files)} files are eligible for processing.")
 
-    for file in eligible_files:
-        if is_file_processed(file):
-            print(f"Skipping already processed file: {file}")
-            continue
+    # Step 3: Get already processed files in one DB query
+    processed_files = get_processed_files()
+    
+    files_to_process = [file for file in eligible_files if file not in processed_files]
 
-        # Step 3: Parse the CSV and extract data
+    print(f"{len(files_to_process)} files to be processed.")
+
+    processed_list = []
+    for file in files_to_process:
+        # Step 4: Parse the CSV and extract data
         data = parse_csv(file)
-
         if data:
-            # Step 4: Send data to API
+            # Step 5: Send data to API
             send_to_api(data)
+            processed_list.append(file)
 
-            # Step 5: Mark file as processed
-            mark_file_as_processed(file)
+    # Step 6: Mark processed files in batch
+    mark_files_as_processed(processed_list)
 
     print("\n--- Processing Complete ---")
 
 if __name__ == "__main__":
     main()
-
 
