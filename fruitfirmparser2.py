@@ -132,7 +132,7 @@ def main():
 
     # Step 2: Filter out recently modified files
     eligible_files = filter_recent_files(all_csv_files)
-    print(f"{len(eligible_files)} files are eligible for processing.")
+    print(f"{len(eligible_files)} files are old enough for processing.")
 
     # Step 3: Get already processed files in one DB query
     processed_files = get_processed_files()
