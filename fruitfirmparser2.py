@@ -42,15 +42,22 @@ def mark_file_as_processed(file_path):
     conn.commit()
     conn.close()
 
-# Find all CSV files in rundata directory (deepest level)
+# Find all CSV files in rundata directory (excluding "old" directories)
 def find_csv_files():
     csv_files = []
-    for root, _, files in os.walk(RUNDATA_DIR):
+    for root, dirs, files in os.walk(RUNDATA_DIR):
+        # Ignore "old" directories
+        if "old" in root.split(os.sep):
+            continue
+
         for file in files:
             if file.endswith(".csv"):
                 full_path = os.path.join(root, file)
                 csv_files.append(full_path)
+
+    print("Detected CSV files:", csv_files)  # Debugging output
     return csv_files
+
 
 # Filter out files modified in the last 2 minutes
 def filter_recent_files(files):
