@@ -252,6 +252,12 @@ def add_option_config():
 @app.route('/check_barcode', methods=['POST'])
 def check_barcode():
     barcode = request.json.get('barcode')
+
+    if not barcode:
+        return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
+
+    barcode = barcode.strip()
+    
     try:
         plant_data = PlantData.query.filter_by(barcode=barcode).first()
         if plant_data:
@@ -294,6 +300,8 @@ def add_plant_data():
 
     if not barcode:
         return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
+    
+    barcode = barcode.strip()
 
     try:
         # Check if a plant with the given barcode already exists
