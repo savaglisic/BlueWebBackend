@@ -1,6 +1,8 @@
+import csv
 import datetime
 from difflib import get_close_matches
-from flask import Flask, request, jsonify
+import io
+from flask import Flask, Response, request, jsonify, stream_with_context
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
 from models import APIKey, Genotype, OptionConfig, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
@@ -257,7 +259,7 @@ def check_barcode():
         return jsonify({'status': 'error', 'message': 'Barcode is required.'}), 400
 
     barcode = barcode.strip()
-    
+
     try:
         plant_data = PlantData.query.filter_by(barcode=barcode).first()
         if plant_data:
@@ -575,6 +577,78 @@ def fruit_firm():
     except Exception as e:
         db.session.rollback()
         return jsonify({'status': 'error', 'message': str(e)}), 400
+    
+@app.route('/download_plant_data_csv', methods=['GET'])
+def download_plant_data_csv():
+    def generate_csv():
+        # Create an in-memory text stream for CSV data
+        data = io.StringIO()
+        writer = csv.writer(data)
+        # Define the CSV header (adjust field names as needed)
+        header = [
+            'id', 'barcode', 'genotype', 'stage', 'site', 'block', 'project',
+            'post_harvest', 'bush_plant_number', 'notes', 'mass', 'x_berry_mass',
+            'number_of_berries', 'ph', 'brix', 'juicemass', 'tta', 'mladded',
+            'avg_firmness', 'avg_diameter', 'sd_firmness', 'sd_diameter', 'box',
+            'week', 'timestamp'
+        ]
+        writer.writerow(header)
+        # Yield the header row
+        yield data.getvalue()
+        data.seek(0)
+        data.truncate(0)
+        
+        # Get total count for progress tracking (if needed for logging)
+        total = PlantData.query.count()
+        count = 0
+        
+        # Use yield_per to avoid loading the entire table into memory at once
+        query = PlantData.query.yield_per(100)
+        for plant in query:
+            row = [
+                plant.id,
+                plant.barcode,
+                plant.genotype,
+                plant.stage,
+                plant.site,
+                plant.block,
+                plant.project,
+                plant.post_harvest,
+                plant.bush_plant_number,
+                plant.notes,
+                plant.mass,
+                plant.x_berry_mass,
+                plant.number_of_berries,
+                plant.ph,
+                plant.brix,
+                plant.juicemass,
+                plant.tta,
+                plant.mladded,
+                plant.avg_firmness,
+                plant.avg_diameter,
+                plant.sd_firmness,
+                plant.sd_diameter,
+                plant.box,
+                plant.week,
+                plant.timestamp,
+            ]
+            writer.writerow(row)
+            count += 1
+
+            # Optionally, log progress to the server console
+            if count % 100 == 0:
+                app.logger.info(f"Processed {count} of {total} records")
+            
+            # Yield the current chunk of CSV data
+            yield data.getvalue()
+            data.seek(0)
+            data.truncate(0)
+    
+    headers = {
+        "Content-Disposition": "attachment; filename=plant_data.csv",
+        "Content-Type": "text/csv"
+    }
+    return Response(stream_with_context(generate_csv()), headers=headers)
 
 @app.after_request
 def after_request(response):
