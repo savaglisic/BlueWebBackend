@@ -465,7 +465,8 @@ def get_plant_data():
             'sd_diameter': plant.sd_diameter,
             'box': plant.box,
             'week': plant.week,
-            'timestamp': plant.timestamp,  # Sorting is applied based on this field
+            'timestamp': plant.timestamp, 
+            'fruitfirm_timestamp': plant.fruitfirm_timestamp
         }
 
     plant_data_list = [serialize_plant_data(p) for p in paginated_result.items]
@@ -595,7 +596,7 @@ def download_plant_data_csv():
             'post_harvest', 'bush_plant_number', 'notes', 'mass', 'x_berry_mass',
             'number_of_berries', 'ph', 'brix', 'juicemass', 'tta', 'mladded',
             'avg_firmness', 'avg_diameter', 'sd_firmness', 'sd_diameter', 'box',
-            'week', 'timestamp'
+            'week', 'timestamp', 'fruitfirm_timestamp'
         ]
         writer.writerow(header)
         # Yield the header row
@@ -636,6 +637,7 @@ def download_plant_data_csv():
                 plant.box,
                 plant.week,
                 plant.timestamp,
+                plant.fruitfirm_timestamp
             ]
             writer.writerow(row)
             count += 1
