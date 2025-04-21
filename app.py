@@ -1,7 +1,8 @@
 import csv
-import datetime
+from datetime import datetime
 from difflib import get_close_matches
 import io
+from zoneinfo import ZoneInfo
 from flask import Flask, Response, request, jsonify, stream_with_context
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
@@ -558,16 +559,20 @@ def fruit_firm():
             if sd_diameter is not None:
                 plant_data.sd_diameter = sd_diameter
 
+            eastern_time = datetime.now(ZoneInfo("America/New_York"))
+            plant_data.fruitfirm_timestamp = eastern_time
             db.session.commit()
             return jsonify({'status': 'success', 'message': 'Plant firmness and diameter data updated successfully!'}), 200
         else:
             # Insert a new plant data record safely
+            eastern_time = datetime.now(ZoneInfo("America/New_York"))
             new_plant_data = PlantData(
                 barcode=barcode,
                 avg_firmness=avg_firmness,
                 avg_diameter=avg_diameter,
                 sd_firmness=sd_firmness,
-                sd_diameter=sd_diameter
+                sd_diameter=sd_diameter,
+                fruitfirm_timestamp=eastern_time
             )
 
             db.session.add(new_plant_data)
