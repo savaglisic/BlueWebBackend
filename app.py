@@ -3,13 +3,14 @@ from datetime import datetime
 from difflib import get_close_matches
 import io
 from zoneinfo import ZoneInfo
-from flask import Flask, Response, request, jsonify, stream_with_context
+from flask import Flask, Response, make_response, request, jsonify, stream_with_context
+import pandas as pd
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
 from models import APIKey, Genotype, OptionConfig, db, User, EmailWhitelist, Rank, Yield, Score, FQ , PlantData
 from functools import wraps
 import os
-from sqlalchemy import or_
+from sqlalchemy import Integer, case, desc, func, or_
 
 app = Flask(__name__)
 CORS(app)
@@ -656,6 +657,139 @@ def download_plant_data_csv():
         "Content-Type": "text/csv"
     }
     return Response(stream_with_context(generate_csv()), headers=headers)
+
+
+@app.route('/download_yield', methods=['GET'])
+def download_yield():
+    # 1. Pull out distinct weeks, ordered
+    weeks = [w for (w,) in
+             db.session.query(PlantData.week)
+                       .distinct()
+                       .order_by(PlantData.week)
+                       .all()]
+
+    # 2. Exclude week 100 and build aggregates
+    pivot_weeks = [w for w in weeks if w != 100]
+    week_aggregates = [
+        func.sum(
+            case(
+                (PlantData.week == week, PlantData.mass.cast(Integer)),
+                else_=0
+            )
+        ).label(f"Week{week}")
+        for week in pivot_weeks
+    ]
+    total_mass = func.sum(PlantData.mass.cast(Integer)).label("TotalMass")
+
+    # 3. Execute the query, excluding null/empty genotypes
+    qry = (
+        db.session
+          .query(
+              PlantData.genotype,
+              PlantData.site,
+              *week_aggregates,
+              total_mass
+          )
+          .filter(
+              PlantData.genotype.isnot(None),
+              PlantData.genotype != ''
+          )
+          .group_by(PlantData.genotype, PlantData.site)
+          .order_by(desc("TotalMass"))
+    )
+    rows = qry.all()
+
+    # 4. Build DataFrame manually
+    columns = ["genotype", "site"] + [f"Week{w}" for w in pivot_weeks] + ["TotalMass"]
+    df = pd.DataFrame(rows, columns=columns)
+
+    # 5. Write out CSV to a StringIO buffer
+    csv_buffer = io.StringIO()
+    df.to_csv(csv_buffer, index=False)
+    csv_buffer.seek(0)
+
+    # 6. Send as CSV attachment
+    resp = make_response(csv_buffer.getvalue())
+    resp.headers['Content-Disposition'] = 'attachment; filename=yield_data.csv'
+    resp.headers['Content-Type'] = 'text/csv'
+    return resp
+
+
+@app.route('/pivot_fruit_quality', methods=['GET'])
+def pivot_fruit_quality():
+    # Pagination & search params
+    page      = int(request.args.get('page', 1))
+    page_size = int(request.args.get('pageSize', 10))
+    search    = request.args.get('search', '').strip()
+
+    # 1. Get weeks and build aggregates
+    weeks = [w for (w,) in
+             db.session.query(PlantData.week)
+                       .distinct()
+                       .order_by(PlantData.week)
+                       .all()]
+    pivot_weeks = [w for w in weeks if w != 100]
+    week_aggregates = [
+        func.sum(
+            case(
+                (PlantData.week == week, PlantData.mass.cast(Integer)),
+                else_=0
+            )
+        ).label(f"Week{week}")
+        for week in pivot_weeks
+    ]
+    total_mass = func.sum(PlantData.mass.cast(Integer)).label("TotalMass")
+
+    # 2. Base query (exclude null/empty genotypes)
+    base_q = (
+        db.session
+          .query(
+              PlantData.genotype,
+              PlantData.site,
+              *week_aggregates,
+              total_mass
+          )
+          .filter(
+              PlantData.genotype.isnot(None),
+              PlantData.genotype != ''
+          )
+    )
+
+    # 3. Apply search filter if present
+    if search:
+        base_q = base_q.filter(PlantData.genotype.ilike(f"%{search}%"))
+
+    # 4. Count distinct (genotype, site) for pagination
+    count_q = (
+        db.session
+          .query(PlantData.genotype, PlantData.site)
+          .filter(
+              PlantData.genotype.isnot(None),
+              PlantData.genotype != ''
+          )
+          .distinct()
+    )
+    if search:
+        count_q = count_q.filter(PlantData.genotype.ilike(f"%{search}%"))
+    total_rows = db.session.query(func.count()).select_from(count_q.subquery()).scalar()
+
+    # 5. Apply ordering, LIMIT/OFFSET
+    results = (
+        base_q.group_by(PlantData.genotype, PlantData.site)
+              .order_by(desc("TotalMass"))
+              .limit(page_size)
+              .offset((page - 1) * page_size)
+              .all()
+    )
+
+    # 6. Serialize rows into dicts
+    columns = ["genotype", "site"] + [f"Week{w}" for w in pivot_weeks] + ["TotalMass"]
+    data = [dict(zip(columns, row)) for row in results]
+
+    return jsonify({
+        "data":  data,
+        "total": total_rows
+    })
 
 @app.after_request
 def after_request(response):
