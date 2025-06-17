@@ -671,15 +671,15 @@ def download_yield():
     # 2. Exclude week 100 and build aggregates
     pivot_weeks = [w for w in weeks if w != 100]
     week_aggregates = [
-        func.sum(
+        func.avg(
             case(
                 (PlantData.week == week, PlantData.mass.cast(Integer)),
-                else_=0
+                else_=None
             )
         ).label(f"Week{week}")
         for week in pivot_weeks
     ]
-    total_mass = func.sum(PlantData.mass.cast(Integer)).label("TotalMass")
+    total_mass = func.avg(PlantData.mass.cast(Integer)).label("TotalMass")
 
     # 3. Execute the query, excluding null/empty genotypes
     qry = (
@@ -730,15 +730,15 @@ def pivot_fruit_quality():
                        .all()]
     pivot_weeks = [w for w in weeks if w != 100]
     week_aggregates = [
-        func.sum(
+        func.avg(
             case(
                 (PlantData.week == week, PlantData.mass.cast(Integer)),
-                else_=0
+                else_=None
             )
         ).label(f"Week{week}")
         for week in pivot_weeks
     ]
-    total_mass = func.sum(PlantData.mass.cast(Integer)).label("TotalMass")
+    total_mass = func.avg(PlantData.mass.cast(Integer)).label("TotalMass")
 
     # 2. Base query (exclude null/empty genotypes)
     base_q = (
